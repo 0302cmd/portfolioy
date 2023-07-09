@@ -1,0 +1,523 @@
+body {
+  background-color: #f5f5f5;
+  overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
+  font-family:Helvetica, sans-serif;
+  width: 100%;
+  margin: 0;/*retira a margem branca do lado esquerdo*/
+  padding: 0;
+}
+
+.dark-bg {
+  background-color: #e7e7e7; /* Cor de fundo mais escura */
+}
+
+header {
+  position: sticky;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1; /* Adicione um índice Z para que a barra de navegação fique acima dos cards */
+}
+
+nav {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 20px;
+}
+
+nav a {
+  margin-right: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #836FFF;
+  font-size: 18px;
+  font-family: trebuchet ms;
+}
+
+main {
+  width: 100%;
+}
+
+section {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centraliza verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  text-align: center; /* Centraliza o texto */
+  margin: 0 auto;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.content-container {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Espaçamento inferior entre o conteúdo e os botões */
+  margin-right: 0px;
+  margin-top: 90px;
+}
+
+/*texto primeira parte*/
+.text-container {
+  flex: 1;
+  text-align: center;
+}
+
+.img-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.minhafoto {
+  width: 300px;
+  border-radius: 50%;
+  /*margin-left: 10px;  Espaçamento entre a imagem e o texto */
+}
+
+.img-botoes-container{
+  margin-left: 40px;
+}
+
+.nome-completo {
+  margin-bottom: 10px;
+  text-align: center; /* Centraliza o texto */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.profissao {
+  margin-top: 0;
+  font-size: 48px;
+  text-align: center; /* Centraliza o texto */
+  font-family: helvetica;
+  color: #836FFF;
+  margin-bottom: 0px;
+}
+
+/* Estilo para a caixa invisível */
+.invisible-box {
+  display: none;
+}
+
+.topico{
+  /*font-weight: 100;*/
+  font-size: 29px;
+  margin-top: 70px;
+  color: #836FFF;
+  font-weight:bolder;
+  font-family: Helvetica, sans-serif;
+}
+
+/*cartoes habilidades*/
+.father {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  width: 100%; /* Defina a largura desejada para os cards */
+  height: 10px;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-container {
+  margin-top: 20px; /* Adicione um espaçamento entre a barra de navegação e os cards */
+  padding-top: 5px; /* Adicione um espaçamento interno no topo do container dos cards */
+  padding-bottom: 5px;
+  margin-bottom: 120px; /* Aumenta o espaço inferior da seção habilidades */
+}
+
+.card .titulo-projeto {
+  margin-top: 20px;
+  font-size: 26px;
+  color: #000000d4;
+}
+
+.card h2 {
+  color: #0e0e0e ;
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.card-hover {
+  position: relative;
+  width: 80px; /* Reduza a largura dos cards para 200px */
+  height: 190px; /* Reduza a altura dos cards para 300px */
+  background-color: #e7e7e7; /*fundo dos cartoes habilidades*/
+  border-radius: 10px;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.card-hover p {
+  font-size: 18px;
+  font-weight: 700;
+  color:rgb(75, 75, 75);
+  /*text-shadow: 0.1em 0.1em 0.05em #333;*/
+}
+
+.margin-js {
+  margin-top: 6%;
+}
+
+.margin-bt{
+  margin-top: 10%;
+}
+
+.logo-html {
+  width: 100px;
+}
+
+.logo-js {
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 85px;
+}
+
+.logo-css {
+  width: 71px;
+  margin: 10px;
+}
+
+.logo-react {
+  width: 90px;
+  margin: 3px;
+}
+
+.logo-typescript {
+  width: 82px;
+  margin-top: 10px;
+
+}
+
+.logo-bootstrap {
+  width: 100px;
+}
+
+.descricao{
+  font-family: trebuchet ms;
+  color: rgb(78, 78, 78);
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/*Formulario de contato*/
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  margin-bottom: 33px;
+
+}
+
+#contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-left: 0%;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #836FFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #480999;
+}
+
+.btn-enviar {
+  margin-left: auto;
+}
+
+.dark-bg{
+  background-color: #e7e7e7;
+  margin-bottom: 0px; /* Adiciona espaço entre a seção e o rodapé */
+}
+
+@media screen and (max-width: 480px) {
+  .form-container {
+    width: 80%;
+  }
+  nav a {
+      margin-right: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #836FFF;
+      font-size: 17px;
+  }
+  .content-container{
+    flex-direction: column;
+  }
+  .img-botoes-container{
+    margin-left: 0px;
+  }
+}
+
+/*Botoes de contato primeira parte*/
+.botoes-container {
+  margin-top: 10px;
+  margin-right: 60px;
+}
+
+.logo-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 20px; /* Aumenta a margem direita em 20 pixels */
+}
+
+.botao {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  margin: 10px;
+  background-color: #836FFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.botoes-container .botao img {
+  width: 50px;
+  height: 50px;
+}
+
+.botao:hover {
+  background-color: #0863c4;
+}
+
+.img-linkedin{
+  margin-top: 3px;
+  width: 65px;
+}
+
+.img-git {
+  margin-top: 8px;
+  width: 54px;
+}
+
+.img-cv {
+  margin-top: 5px;
+  width: 58px;
+}
+
+/*footer*************************************************************/
+.main-footer {
+  background: #685bbdce;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinha os itens verticalmente */
+  padding: 20px;
+  flex-direction: column;
+}
+
+.footer-icon img{
+  margin-top: 26px;
+  width: 70px;
+  margin-left: 90px;
+}
+
+.footer-icon p {
+  margin-left: 20px; /* Adiciona um espaçamento à esquerda */
+  margin-bottom: 70px;
+}
+
+.main-footer__lower {
+  margin-top: 60px;
+  text-align: center;
+  justify-content: center;
+}
+
+.gmail-font{
+  font-weight: 600;
+}
+
+.main-footer {
+  margin-top: 0px; /* Adiciona espaço entre as seções e o rodapé */
+}
+
+.projeto-1,
+.projeto-2 {
+  flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
+  margin-bottom: 40px;
+  border: 2px solid #836FFF; /* Adiciona a moldura com cor personalizada */
+  border-radius: 10px; /* Define a borda arredondada */
+  padding: 10px; /* Adiciona um espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Alinha os botões verticalmente */
+}
+
+.projetos-container {
+  display: flex;
+  justify-content: space-between; /* Distribui os projetos com espaço entre eles */
+  flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
+}
+
+.projetos-container > div {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 40px;
+  border: 2px solid #836FFF;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.projeto-1 img,
+.projeto-2 img {
+  width: 200px; /* Defina a largura desejada para a imagem */
+  border-radius: 10px;
+}
+
+.projeto-1 h2,
+.projeto-2 h2 {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #000;
+}
+
+.projeto-1 p,
+.projeto-2 p {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+}
+
+.projeto-1 .botao-p,
+.projeto-2 .botao-p {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #836FFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.projeto-1 .botao-p:hover,
+.projeto-2 .botao-p:hover {
+  background-color: #480999;
+}
+
+
+/* Estilos para as imagens */
+.botoes-projeto {
+  display: flex;
+  justify-content: space-around; /* Distribui os botões com espaço entre eles */
+  width: 100%; /* Define a largura total */
+}
+
+.botao-p .img-git {
+  width: 50px; /* Define o tamanho desejado para a imagem */
+  height: auto; /* Permite que a altura seja ajustada proporcionalmente */
+  margin-bottom: 8px;
+}
+
+.botao-p .img-www {
+  width: 30px; /* Define o tamanho desejado para a imagem */
+  height: auto; /* Permite que a altura seja ajustada proporcionalmente */
+  margin-right: 6px;
+}
+
+/* Estilos para os botões */
+.botao-p{
+  display: flex;
+  justify-content: flex-end; /* Alinha o conteúdo à direita */
+  align-items: center; /* Centraliza verticalmente */
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  background-color: #836FFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 50%;
+  padding-right: 10px; /* Adiciona um espaçamento à direita do conteúdo */
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .projeto-1,
+  .projeto-2 {
+    flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
+  }
+  .projetos-container {
+    justify-content: center; /* Centraliza os projetos verticalmente no modo responsivo*/
+  }
+}
+
+/*Botão para voltar ao topo*/
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #adadadef;
+  color: #fff;
+  padding: 7px 10px;
+  border-radius: 1000px;
+  text-decoration: none;
+  margin-right: 0px;
+}
+.back-to-top .seta{
+  width: 22px;
+}
+
+/*********************************/
+
+.titulo-degrade {
+  background: linear-gradient(to right, #836FFF, #4D3A91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
