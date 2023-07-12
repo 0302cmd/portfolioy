@@ -101,7 +101,9 @@ h1 {
   font-family: helvetica;
   color: #836FFF;
   margin-bottom: 0px;
+  text-shadow: 2px 2px 4px rgba(131, 111, 255, 0.3); /* Ajuste a cor da sombra para corresponder à cor do texto */
 }
+
 
 /* Estilo para a caixa invisível */
 .invisible-box {
@@ -112,9 +114,9 @@ h1 {
   /*font-weight: 100;*/
   font-size: 29px;
   margin-top: 70px;
-  color: #836FFF;
-  font-weight:bolder;
+  /*color: #836FFF;*/
   font-family: Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 /*cartoes habilidades*/
@@ -168,9 +170,10 @@ h1 {
 }
 
 .card-hover p {
-  font-size: 18px;
-  font-weight: 700;
-  color:rgb(75, 75, 75);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  font-weight:550;
+  color:rgb(39, 39, 39);
   /*text-shadow: 0.1em 0.1em 0.05em #333;*/
 }
 
@@ -323,6 +326,7 @@ button[type="submit"]:hover {
   color: white;
   text-decoration: none;
   border-radius: 50%;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); /* Adicione esta propriedade para a sombra */
 }
 
 .botoes-container .botao img {
@@ -332,6 +336,8 @@ button[type="submit"]:hover {
 
 .botao:hover {
   background-color: #0863c4;
+  width: 69px ;
+  height: 69px;
 }
 
 .img-linkedin{
@@ -366,6 +372,7 @@ button[type="submit"]:hover {
   margin-left: 90px;
 }
 
+
 .footer-icon p {
   margin-left: 20px; /* Adiciona um espaçamento à esquerda */
   margin-bottom: 70px;
@@ -385,10 +392,13 @@ button[type="submit"]:hover {
   margin-top: 0px; /* Adiciona espaço entre as seções e o rodapé */
 }
 
-.projeto-1,
-.projeto-2 {
+
+
+.projeto-1 {
   flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
   margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 250px;
   border: 2px solid #836FFF; /* Adiciona a moldura com cor personalizada */
   border-radius: 10px; /* Define a borda arredondada */
   padding: 10px; /* Adiciona um espaçamento interno */
@@ -398,10 +408,26 @@ button[type="submit"]:hover {
   justify-content: space-between; /* Alinha os botões verticalmente */
 }
 
+.projeto-2{
+  flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-left: 20px;
+  margin-right: 250px;
+  border: 2px solid #836FFF; /* Adiciona a moldura com cor personalizada */
+  border-radius: 10px; /* Define a borda arredondada */
+  padding: 10px; /* Adiciona um espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Alinha os botões verticalmente */
+
+}
+
 .projetos-container {
   display: flex;
   justify-content: space-between; /* Distribui os projetos com espaço entre eles */
-  flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
+  
 }
 
 .projetos-container > div {
@@ -423,15 +449,17 @@ button[type="submit"]:hover {
 .projeto-2 h2 {
   margin-top: 10px;
   font-size: 24px;
-  color: #000;
+  color: #131313;
+  font-family: Helvetica, sans-serif;
 }
 
 .projeto-1 p,
 .projeto-2 p {
   margin-top: 10px;
   font-size: 16px;
-  color: #333;
+  color: #494949;
   text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .projeto-1 .botao-p,
@@ -461,39 +489,59 @@ button[type="submit"]:hover {
 .botao-p .img-git {
   width: 50px; /* Define o tamanho desejado para a imagem */
   height: auto; /* Permite que a altura seja ajustada proporcionalmente */
-  margin-bottom: 8px;
+  margin-bottom: 9px;
+  margin-right: 0px;
 }
 
 .botao-p .img-www {
   width: 30px; /* Define o tamanho desejado para a imagem */
-  height: auto; /* Permite que a altura seja ajustada proporcionalmente */
-  margin-right: 6px;
+  height: auto; 
+  margin-left: 8px;/* Permite que a altura seja ajustada proporcionalmente */
+  /*margin-right: 6px;*/
 }
 
 /* Estilos para os botões */
+.botao-p p {
+  color: white;
+  margin: 10px;
+  padding-left: 10px;/* Adiciona um espaçamento à direita do conteúdo */
+  max-width: 80px; /* Defina o tamanho máximo do texto */
+  overflow: hidden; /* Oculta o conteúdo que ultrapassar o tamanho máximo */
+  white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+  margin: 0; /* Remove a margem em volta do texto */
+}
+
 .botao-p{
   display: flex;
-  justify-content: flex-end; /* Alinha o conteúdo à direita */
-  align-items: center; /* Centraliza verticalmente */
+  align-items: center; /*Centraliza verticalmente */
   width: 120px;
   height: 40px;
   margin: 10px;
   background-color: #836FFF;
-  color: white;
   text-decoration: none;
   border-radius: 50%;
-  padding-right: 10px; /* Adiciona um espaçamento à direita do conteúdo */
+  cursor: pointer;
+  width: auto;/* Ajusta a largura automaticamente para o conteúdo */
+ 
 }
+/*surface duo*/
+@media screen and (max-width: 630px) {
+  .content-container{
+    flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
+    margin: 0 0 0 0;
+    flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
+  }
 
-
-
-@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 1212px) {
   .projeto-1,
   .projeto-2 {
     flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
+    margin: 0 0 0 0;
   }
   .projetos-container {
     justify-content: center; /* Centraliza os projetos verticalmente no modo responsivo*/
+    flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
   }
 }
 
@@ -517,7 +565,45 @@ button[type="submit"]:hover {
 /*********************************/
 
 .titulo-degrade {
-  background: linear-gradient(to right, #836FFF, #4D3A91);
+  background: linear-gradient(to right, #836FFF, #26136e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* ... */
+
+
+/* Defina as propriedades de animação */
+@keyframes fade-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Adicione as classes de animação */
+.animate {
+  animation: fade-up 1s ease-in-out;
+}
+
+.fade-in.animate {
+  animation: fade-in 1s ease-in-out;
+}
+
+.fade-up.animate {
+  animation: fade-up 1s ease-in-out;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section.fade-up {
+  opacity: 1;
+  transform: translateY(0);
 }
