@@ -67,3 +67,37 @@ animateOnScroll();
       backToTopButton.style.display = 'none';
     }
   });  
+
+//flutuante
+window.addEventListener('load', function() {
+  const logoButtons = document.querySelector('.logo-buttons');
+  logoButtons.classList.add('animate');
+});
+
+//Animar foto
+//function animateProfilePicture() {
+ // var profilePicture = document.querySelector('.animar-foto');
+ // var rect = profilePicture.getBoundingClientRect();
+ // var isInViewport = rect.top <= window.innerHeight && rect.bottom >= 0;
+
+  //if (isInViewport) {
+    //profilePicture.classList.add('animate');
+  //} else {
+  //  profilePicture.classList.remove('animate');
+  //}
+//}
+
+// Adicione um listener para verificar quando a página é rolada
+//window.addEventListener('scroll', animateProfilePicture);
+
+// Verifique a animação quando a página carregar
+//animateProfilePicture();
+
+//function animateZoomOut() {
+  //const img = document.querySelector('.minhafoto');
+  //const originalWidth = img.offsetWidth;
+  //const originalHeight = img.offsetHeight;
+  //const zoomScale = originalWidth / (originalWidth * 0.1); // Defina o fator de escala desejado, nesse caso 0.8
+//
+  //img.style.transform = `scale(${zoomScale})`;
+//}

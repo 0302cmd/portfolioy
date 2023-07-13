@@ -7,16 +7,13 @@ body {
   padding: 0;
 }
 
-.dark-bg {
-  background-color: #e7e7e7; /* Cor de fundo mais escura */
-}
 
 header {
   position: sticky;
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #fff;
+  background-color: #f5f5f5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1; /* Adicione um índice Z para que a barra de navegação fique acima dos cards */
 }
@@ -31,9 +28,8 @@ nav {
 nav a {
   margin-right: 25px;
   text-decoration: none;
-  font-weight: bold;
   color: #836FFF;
-  font-size: 18px;
+  font-size: 25px;
   font-family: trebuchet ms;
 }
 
@@ -112,7 +108,7 @@ h1 {
 
 .topico{
   /*font-weight: 100;*/
-  font-size: 29px;
+  font-size: 37px;
   margin-top: 70px;
   /*color: #836FFF;*/
   font-family: Helvetica, sans-serif;
@@ -158,7 +154,7 @@ h1 {
   position: relative;
   width: 80px; /* Reduza a largura dos cards para 200px */
   height: 190px; /* Reduza a altura dos cards para 300px */
-  background-color: #e7e7e7; /*fundo dos cartoes habilidades*/
+  background-color: #eeeeee; /*fundo dos cartoes habilidades*/
   border-radius: 10px;
   margin: 10px;
   display: flex;
@@ -280,7 +276,7 @@ button[type="submit"]:hover {
 }
 
 .dark-bg{
-  background-color: #e7e7e7;
+  background-color: #eeeeee;
   margin-bottom: 0px; /* Adiciona espaço entre a seção e o rodapé */
 }
 
@@ -291,9 +287,8 @@ button[type="submit"]:hover {
   nav a {
       margin-right: 10px;
       text-decoration: none;
-      font-weight: bold;
       color: #836FFF;
-      font-size: 17px;
+      font-size: 22px;
   }
   .content-container{
     flex-direction: column;
@@ -399,7 +394,6 @@ button[type="submit"]:hover {
   margin-bottom: 40px;
   margin-top: 40px;
   margin-left: 250px;
-  border: 2px solid #836FFF; /* Adiciona a moldura com cor personalizada */
   border-radius: 10px; /* Define a borda arredondada */
   padding: 10px; /* Adiciona um espaçamento interno */
   display: flex;
@@ -414,7 +408,6 @@ button[type="submit"]:hover {
   margin-top: 40px;
   margin-left: 20px;
   margin-right: 250px;
-  border: 2px solid #836FFF; /* Adiciona a moldura com cor personalizada */
   border-radius: 10px; /* Define a borda arredondada */
   padding: 10px; /* Adiciona um espaçamento interno */
   display: flex;
@@ -433,7 +426,8 @@ button[type="submit"]:hover {
 .projetos-container > div {
   flex-basis: calc(50% - 20px);
   margin-bottom: 40px;
-  border: 2px solid #836FFF;
+  border: 1.9px solid #cacaca;
+  background-color: #ffffff;
   border-radius: 10px;
   padding: 10px;
   box-sizing: border-box;
@@ -531,8 +525,132 @@ button[type="submit"]:hover {
     margin: 0 0 0 0;
     flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
   }
-
+  .profissao{
+    margin-top: 40px;
+  }
 }
+
+/*galaxy fold*/
+  @media screen and (max-width: 280px) {
+    .content-container{
+      flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
+      margin: 0 0 0 0;
+      flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
+    }
+      body {
+        font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+      }
+    
+      nav a {
+        margin-right: 10px;
+        font-size: 13px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+      }
+    
+      .content-container {
+        flex-direction: column;
+      }
+    
+      .img-botoes-container {
+        margin-left: 0;
+        margin-top: 20px; /* Adicione um espaçamento entre a imagem e o texto */
+      }
+    
+      .minhafoto {
+        width: 200px; /* Reduza o tamanho da imagem para se adequar à tela menor */
+      }
+    
+      .logo-buttons {
+        margin-top: 10px;
+        margin-right: 10px; /* Aumenta a margem direita em 10 pixels */
+      }
+    
+      .botao {
+        width: 50px; /* Reduza o tamanho do botão para se adequar à tela menor */
+        height: 50px; /* Reduza o tamanho do botão para se adequar à tela menor */
+      }
+    
+      .botao-p {
+        width: 90px; /* Reduza o tamanho do botão para se adequar à tela menor */
+        height: 30px; /* Reduza o tamanho do botão para se adequar à tela menor */
+      }
+    
+      .botao-p .img-git {
+        width: 30px; /* Reduza o tamanho da imagem para se adequar à tela menor */
+      }
+    
+      .botao-p .img-www {
+        width: 20px; /* Reduza o tamanho da imagem para se adequar à tela menor */
+      }
+    .profissao{
+      margin-top: 70px;
+      font-size: 40px;
+    }
+      .descricao {
+        font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+      }
+    
+      .father {
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .card-hover {
+        width: 150px; /* Reduza o tamanho do card para se adequar à tela menor */
+        height: 150px; /* Reduza o tamanho do card para se adequar à tela menor */
+        margin: 5px;
+      }
+    
+      .card-hover p {
+        font-size: 16px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+      }
+    
+      .margin-js {
+        margin-top: 3%;
+      }
+    
+      .margin-bt {
+        margin-top: 6%;
+      }
+    
+      .projeto-1,
+      .projeto-2 {
+        flex-basis: 100%; /* Defina a largura dos projetos para 100% da largura do contêiner */
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    
+      .projeto-1 img,
+      .projeto-2 img {
+        width: 100%; /* Ajuste a largura da imagem para preencher o contêiner */
+        border-radius: 10px;
+      }
+    
+      .projeto-1 h2,
+      .projeto-2 h2 {
+        font-size: 18px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+        margin-top: 5px;
+      }
+    
+      .projeto-1 p,
+      .projeto-2 p {
+        font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+      }
+    
+      .projeto-1 .botao-p,
+      .projeto-2 .botao-p {
+        padding: 5px 10px; /* Reduza o espaçamento interno do botão para se adequar à tela menor */
+      }
+    
+      .back-to-top {
+        bottom: 10px;
+        right: 10px;
+      }
+    
+      .back-to-top .seta {
+        width: 18px; /* Reduza o tamanho da imagem para se adequar à tela menor */
+      }
+    }
+    
 @media screen and (max-width: 1212px) {
   .projeto-1,
   .projeto-2 {
@@ -551,7 +669,7 @@ button[type="submit"]:hover {
   bottom: 20px;
   right: 20px;
   display: none;
-  background-color: #adadadef;
+  background-color: #bdbcbcef;
   color: #fff;
   padding: 7px 10px;
   border-radius: 1000px;
@@ -607,3 +725,36 @@ button[type="submit"]:hover {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* imagens flutuantes habilidades*/
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.float {
+  animation: floating 2s ease-in-out infinite;
+}
+
+/*animação foto
+.animar-foto {
+  animation: zoom 5s infinite alternate;
+}
+
+@keyframes zoom {
+
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+*/
