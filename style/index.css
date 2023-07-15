@@ -7,6 +7,46 @@ body {
   padding: 0;
 }
 
+nav {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 20px;
+  height: 20px;/*Altura barra de navegação*/
+}
+
+nav a {
+  margin-right: 25px;
+  text-decoration: none;
+  /*font-weight:550;*/
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(0, 0, 0);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Aumente o valor para aumentar a margem */
+  left: 25%; /* Coloca a linha na metade da largura do elemento pai */
+  width: 50%; /* Define a largura da linha como metade do elemento pai */
+  height: 3px; /* Define a espessura da linha */
+  background-color: #8758FF; /* Substitua "red" pela cor desejada */
+  transform: translateX(-50%); /* Move a linha para a esquerda em metade de sua própria largura */
+  transition: width 0.3s ease; /* Adiciona uma transição suave ao encurtar a linha */
+  border-radius: 3px; /* Arredonda as pontas da linha */
+}
+
+.nav-link:hover::after {
+  width: 0; /* Encurta a linha para zero */
+}
 
 header {
   position: sticky;
@@ -18,20 +58,89 @@ header {
   z-index: 1; /* Adicione um índice Z para que a barra de navegação fique acima dos cards */
 }
 
-nav {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  padding: 20px;
+#menu-btn{
+  position:fixed;
+  /*margin*/top: 8px;
+  margin-bottom: 10px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  line-height: 70px;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  background: #6f5fc7;
+  color: #390ca3;
+  text-align: center;
+  z-index: 1000;
+}
+#menu-btn img{
+  width: 30px;
+}
+#menu-btn.fa-times{
+  transform: rotate(180deg);
+  background: #3f1b84;/*cor ao clicar*/
+  color: #aaaaaa00;
 }
 
-nav a {
-  margin-right: 25px;
+.menu-btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pcnav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+.navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 250px;
+  width: 100%; ;
+  background: #e9e9e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  padding-bottom: 50px;
+  clip-path: circle(0% at 95.3% 8.5%);
+}
+
+.navbar.active{
+  clip-path: circle(140% at 95.3% 8.5%);
+
+}
+.navbar a{
+  font-size: 30px;
+  padding-bottom: 30px;
+  color: #000;
   text-decoration: none;
-  /*font-weight:550;*/
-  font-size: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: rgb(0, 0, 0);
+}
+
+.navbar a::before{
+  content: attr(data-text);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 5em;
+  color: #000;
+  pointer-events: none;
+  font-weight: bolder;
+  letter-spacing: .4em;
+  opacity: 0;
+  z-index: -1;
+}
+
+.navbar a:hover::before{
+  letter-spacing: 0em;
+  opacity: .1;
+  transition: .3s ease-out;
 }
 
 main {
@@ -300,7 +409,7 @@ button[type="submit"]:hover {
   }
 }
 
-/*Botoes de contato primeira parte*/
+/*Botoes de contato primeira parte em baixo da foto*/
 .botoes-container {
   margin-top: 10px;
   margin-right: 60px;
@@ -652,8 +761,18 @@ button[type="submit"]:hover {
       .back-to-top .seta {
         width: 18px; /* Reduza o tamanho da imagem para se adequar à tela menor */
       }
+      .img-linkedin{
+        width: 50px;
+      }
+      .img-git{
+        width: 40px ;
+      }
+      .img-cv{
+        width: 40px;
+      }
     }
-    
+/*fim galaxy fold*/
+
 @media screen and (max-width: 1212px) {
   .projeto-1,
   .projeto-2 {
@@ -766,4 +885,103 @@ button[type="submit"]:hover {
   border-top: 2px solid #cbcaca; /* Defina a cor e o estilo da linha */
   margin-top: 20px; /* Ajuste a margem superior conforme necessário */
   margin-bottom: 20px; /* Ajuste a margem inferior conforme necessário */
+}
+
+/*icone de menu********************************************************************/
+/* Estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos da barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: #000000;
+}
+
+.logo {
+  font-size: 24px;
+}
+
+.menu-items {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-items li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.menu-items li:first-child {
+  margin-left: 0;
+}
+
+.menu-items li a {
+  color: #000000;
+  text-decoration: none;
+  padding: 5px;
+}
+
+/* Estilos do ícone do menu responsivo */
+.menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Estilos para telas menores */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+  }
+
+  .menu-items li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .menu-toggle:checked ~ .menu-items {
+    display: block;
+  }
+}
+
+/*nav mobile*/
+@media screen and (max-width: 540px) {
+  .pcnav{
+    display: none;
+  }
+  nav{
+    height: 50px;
+  }
+  header{
+  height: 65px;
+  }
+
+}
+
+@media screen and (min-width: 540px) {
+  #menu-btn{
+    display:none;
+  }
 }

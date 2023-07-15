@@ -101,3 +101,14 @@ window.addEventListener('load', function() {
 //
   //img.style.transform = `scale(${zoomScale})`;
 //}
+
+//nav responsiva
+
+// Adicione um evento de clique ao ícone do menu
+document.querySelector('#menu-btn').onclick = () =>{
+  document.querySelector('#menu-btn').classList.toggle('fa-times');
+  document.querySelector('.navbar').classList.toggle('active');
+}
+
+
+
