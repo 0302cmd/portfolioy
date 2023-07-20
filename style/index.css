@@ -11,8 +11,7 @@ nav {
   display: flex;
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
-  padding: 20px;
-  height: 20px;/*Altura barra de navegação*/
+  padding: 30px;
 }
 
 nav a {
@@ -27,6 +26,7 @@ nav a {
 .nav-link {
   position: relative;
   display: inline-block;
+  margin-right: 25px;
 }
 
 
@@ -87,6 +87,22 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.btn-enviar {
+  margin-left: auto;
+  text-align: right; /* Alinha o conteúdo do botão à direita */
+  margin-right: 9px; /* Adiciona uma margem à direita para criar espaço entre o botão e o formulário */
+}
+
+.logo-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-aligned {
+  margin-right: 1300px;
 }
 
 .pcnav {
@@ -196,6 +212,7 @@ h1 {
 }
 
 .nome-completo {
+
   margin-bottom: 10px;
   text-align: center; /* Centraliza o texto */
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -370,9 +387,12 @@ textarea {
 }
 
 button[type="submit"] {
-  padding: 10px 20px;
+  padding: 7px 20px;
   background-color: #8758FF;
   color: #fff;
+  font-size: 16px;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -382,9 +402,6 @@ button[type="submit"]:hover {
   background-color: #480999;
 }
 
-.btn-enviar {
-  margin-left: auto;
-}
 
 .dark-bg{
   /*background-color: #eeeeee;*/
@@ -409,7 +426,7 @@ button[type="submit"]:hover {
   }
 }
 
-/*Botoes de contato primeira parte em baixo da foto*/
+/*Botoes de contato primeira parte*/
 .botoes-container {
   margin-top: 10px;
   margin-right: 60px;
@@ -493,6 +510,7 @@ button[type="submit"]:hover {
 
 .gmail-font{
   font-weight: 600;
+  font-size: 20px;
 }
 
 .main-footer {
@@ -589,7 +607,7 @@ button[type="submit"]:hover {
 .botoes-projeto {
   display: flex;
   justify-content: space-around; /* Distribui os botões com espaço entre eles */
-  width: 100%; /* Define a largura total */
+  width: 50%; /* Define a largura total */
 }
 
 .botao-p .img-git {
@@ -609,6 +627,8 @@ button[type="submit"]:hover {
 /* Estilos para os botões */
 .botao-p p {
   color: white;
+  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 600;
   margin: 10px;
   padding-left: 10px;/* Adiciona um espaçamento à direita do conteúdo */
   max-width: 80px; /* Defina o tamanho máximo do texto */
@@ -630,7 +650,7 @@ button[type="submit"]:hover {
   width: auto;/* Ajusta a largura automaticamente para o conteúdo */
  
 }
-/*surface duo*/
+/*surface duo*************************************************************************/
 @media screen and (max-width: 630px) {
   .content-container{
     flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
@@ -638,11 +658,11 @@ button[type="submit"]:hover {
     flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
   }
   .profissao{
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
-/*galaxy fold*/
+/*galaxy fold**************************************************************************/
   @media screen and (max-width: 280px) {
     .content-container{
       flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
@@ -694,7 +714,7 @@ button[type="submit"]:hover {
         width: 20px; /* Reduza o tamanho da imagem para se adequar à tela menor */
       }
     .profissao{
-      margin-top: 70px;
+      margin-top: 10px;
       font-size: 40px;
     }
       .descricao {
@@ -710,6 +730,8 @@ button[type="submit"]:hover {
         width: 150px; /* Reduza o tamanho do card para se adequar à tela menor */
         height: 150px; /* Reduza o tamanho do card para se adequar à tela menor */
         margin: 5px;
+        pointer-events: none; /* Nova propriedade adicionada */
+        cursor: default;
       }
     
       .card-hover p {
@@ -761,18 +783,13 @@ button[type="submit"]:hover {
       .back-to-top .seta {
         width: 18px; /* Reduza o tamanho da imagem para se adequar à tela menor */
       }
-      .img-linkedin{
-        width: 50px;
-      }
-      .img-git{
-        width: 40px ;
-      }
-      .img-cv{
-        width: 40px;
+
+      .gmail-font{
+        font-weight: 600;
+        font-size: 16px;
       }
     }
-/*fim galaxy fold*/
-
+    
 @media screen and (max-width: 1212px) {
   .projeto-1,
   .projeto-2 {
@@ -940,6 +957,19 @@ body {
   cursor: pointer;
 }
 
+.left-aligned {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.ycircle {
+  width: 40px;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
 /* Estilos para telas menores */
 @media screen and (max-width: 768px) {
   .menu-toggle {
@@ -966,10 +996,12 @@ body {
   }
 }
 
+
+
 /*nav mobile*/
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 560px) {
   .pcnav{
-    display: none;
+    display:none;
   }
   nav{
     height: 50px;
@@ -977,11 +1009,24 @@ body {
   header{
   height: 65px;
   }
-
+  .left-aligned {
+    margin-right: 200px;
+    font-size: 20px;
+  }
+  .ycircle {
+    width: 50px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .nome-completo {
+    margin-top: 100px;
 }
-
-@media screen and (min-width: 540px) {
+}
+@media screen and (min-width: 545px) {
   #menu-btn{
     display:none;
   }
 }
+
