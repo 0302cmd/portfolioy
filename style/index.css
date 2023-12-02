@@ -1,9 +1,9 @@
 body {
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   overflow-x: hidden; /* Esconde a barra de rolagem horizontal */
-  font-family:Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   width: 100%;
-  margin: 0;/*retira a margem branca do lado esquerdo*/
+  margin: 0; /*retira a margem branca do lado esquerdo*/
   padding: 0;
 }
 
@@ -19,7 +19,8 @@ nav a {
   text-decoration: none;
   /*font-weight:550;*/
   font-size: 20px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: rgb(0, 0, 0);
 }
 
@@ -29,8 +30,6 @@ nav a {
   margin-right: 25px;
 }
 
-
-
 .nav-link::after {
   content: "";
   position: absolute;
@@ -38,8 +37,10 @@ nav a {
   left: 25%; /* Coloca a linha na metade da largura do elemento pai */
   width: 50%; /* Define a largura da linha como metade do elemento pai */
   height: 3px; /* Define a espessura da linha */
-  background-color: #8758FF; /* Substitua "red" pela cor desejada */
-  transform: translateX(-50%); /* Move a linha para a esquerda em metade de sua própria largura */
+  background-color: #8758ff; /* Substitua "red" pela cor desejada */
+  transform: translateX(
+    -50%
+  ); /* Move a linha para a esquerda em metade de sua própria largura */
   transition: width 0.3s ease; /* Adiciona uma transição suave ao encurtar a linha */
   border-radius: 3px; /* Arredonda as pontas da linha */
 }
@@ -53,14 +54,15 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1; /* Adicione um índice Z para que a barra de navegação fique acima dos cards */
 }
 
-#menu-btn{
-  position:fixed;
-  /*margin*/top: 8px;
+#menu-btn {
+  position: fixed;
+  /*margin*/
+  top: 8px;
   margin-bottom: 10px;
   right: 30px;
   height: 50px;
@@ -74,12 +76,12 @@ header {
   text-align: center;
   z-index: 1000;
 }
-#menu-btn img{
+#menu-btn img {
   width: 30px;
 }
-#menu-btn.fa-times{
+#menu-btn.fa-times {
   transform: rotate(180deg);
-  background: #3f1b84;/*cor ao clicar*/
+  background: #3f1b84; /*cor ao clicar*/
   color: #aaaaaa00;
 }
 
@@ -104,20 +106,20 @@ header {
 .left-aligned {
   margin-right: 1300px;
 }
-  
+
 .pcnav {
   display: flex;
   justify-content: center;
   position: fixed;
 }
 
-.navbar{
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
   height: 250px;
-  width: 100%; ;
+  width: 100%;
   background: #e9e9e9;
   display: flex;
   align-items: center;
@@ -127,36 +129,35 @@ header {
   clip-path: circle(0% at 95.3% 8.5%);
 }
 
-.navbar.active{
+.navbar.active {
   clip-path: circle(140% at 95.3% 8.5%);
-
 }
-.navbar a{
+.navbar a {
   font-size: 30px;
   padding-bottom: 30px;
   color: #000;
   text-decoration: none;
 }
 
-.navbar a::before{
+.navbar a::before {
   content: attr(data-text);
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 5em;
   color: #000;
   pointer-events: none;
   font-weight: bolder;
-  letter-spacing: .4em;
+  letter-spacing: 0.4em;
   opacity: 0;
   z-index: -1;
 }
 
-.navbar a:hover::before{
+.navbar a:hover::before {
   letter-spacing: 0em;
-  opacity: .1;
-  transition: .3s ease-out;
+  opacity: 0.1;
+  transition: 0.3s ease-out;
 }
 
 main {
@@ -207,15 +208,15 @@ h1 {
   /*margin-left: 10px;  Espaçamento entre a imagem e o texto */
 }
 
-.img-botoes-container{
+.img-botoes-container {
   margin-left: 40px;
 }
 
 .nome-completo {
-
   margin-bottom: 10px;
   text-align: center; /* Centraliza o texto */
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .profissao {
@@ -223,18 +224,17 @@ h1 {
   font-size: 48px;
   text-align: center; /* Centraliza o texto */
   font-family: helvetica;
-  color: #8758FF;
+  color: #8758ff;
   margin-bottom: 0px;
   text-shadow: 2px 2px 4px rgba(131, 111, 255, 0.3); /* Ajuste a cor da sombra para corresponder à cor do texto */
 }
-
 
 /* Estilo para a caixa invisível */
 .invisible-box {
   display: none;
 }
 
-.topico{
+.topico {
   /*font-weight: 100;*/
   font-size: 37px;
   margin-top: 70px;
@@ -272,7 +272,7 @@ h1 {
 }
 
 .card h2 {
-  color: #0e0e0e ;
+  color: #0e0e0e;
   font-size: 24px;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -282,7 +282,7 @@ h1 {
   position: relative;
   width: 80px; /* Reduza a largura dos cards para 200px */
   height: 190px; /* Reduza a altura dos cards para 300px */
-  background-color: #F2F2F2; /*fundo dos cartoes habilidades*/
+  background-color: #f2f2f2; /*fundo dos cartoes habilidades*/
   border-radius: 10px;
   margin: 10px;
   display: flex;
@@ -294,10 +294,11 @@ h1 {
 }
 
 .card-hover p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
-  font-weight:550;
-  color:rgb(39, 39, 39);
+  font-weight: 550;
+  color: rgb(39, 39, 39);
   /*text-shadow: 0.1em 0.1em 0.05em #333;*/
 }
 
@@ -305,7 +306,7 @@ h1 {
   margin-top: 6%;
 }
 
-.margin-bt{
+.margin-bt {
   margin-top: 10%;
 }
 
@@ -332,14 +333,13 @@ h1 {
 .logo-typescript {
   width: 82px;
   margin-top: 10px;
-
 }
 
 .logo-bootstrap {
   width: 100px;
 }
 
-.descricao{
+.descricao {
   font-family: trebuchet ms;
   color: rgb(78, 78, 78);
   font-weight: bold;
@@ -354,7 +354,6 @@ h1 {
   align-items: center;
   text-align: left;
   margin-bottom: 33px;
-
 }
 
 #contact-form {
@@ -381,20 +380,21 @@ textarea {
   padding: 10px;
   border: 1px solid #e2e2e2;
   border-radius: 5px;
-    display: block;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
 button[type="submit"] {
-  padding: 7px 20px;
-  background-color: #8758FF;
+  padding: 7px 30px;
+  background-color: #8758ff;
   color: #fff;
-  font-size: 16px;
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 18px;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
 }
 
@@ -402,10 +402,9 @@ button[type="submit"]:hover {
   background-color: #480999;
 }
 
-
-.dark-bg{
+.dark-bg {
   /*background-color: #eeeeee;*/
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
   margin-bottom: 0px; /* Adiciona espaço entre a seção e o rodapé */
 }
 
@@ -414,14 +413,14 @@ button[type="submit"]:hover {
     width: 80%;
   }
   nav a {
-      margin-right: 10px;
-      text-decoration: none;
-      font-size: 22px;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 22px;
   }
-  .content-container{
+  .content-container {
     flex-direction: column;
   }
-  .img-botoes-container{
+  .img-botoes-container {
     margin-left: 0px;
   }
 }
@@ -446,7 +445,7 @@ button[type="submit"]:hover {
   width: 70px;
   height: 70px;
   margin: 10px;
-  background-color: #836FFF;
+  background-color: #836fff;
   color: white;
   text-decoration: none;
   border-radius: 50%;
@@ -460,11 +459,11 @@ button[type="submit"]:hover {
 
 .botao:hover {
   background-color: #510dac;
-  width: 69px ;
+  width: 69px;
   height: 69px;
 }
 
-.img-linkedin{
+.img-linkedin {
   margin-top: 3px;
   width: 65px;
 }
@@ -490,12 +489,11 @@ button[type="submit"]:hover {
   flex-direction: column;
 }
 
-.footer-icon img{
+.footer-icon img {
   margin-top: 26px;
   width: 70px;
   margin-left: 127px;
 }
-
 
 .footer-icon p {
   margin-left: 40px; /* Adiciona um espaçamento à esquerda */
@@ -508,7 +506,7 @@ button[type="submit"]:hover {
   justify-content: center;
 }
 
-.gmail-font{
+.gmail-font {
   font-weight: 600;
   font-size: 20px;
 }
@@ -516,8 +514,6 @@ button[type="submit"]:hover {
 .main-footer {
   margin-top: 0px; /* Adiciona espaço entre as seções e o rodapé */
 }
-
-
 
 .projeto-1 {
   flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
@@ -532,7 +528,7 @@ button[type="submit"]:hover {
   justify-content: space-between; /* Alinha os botões verticalmente */
 }
 
-.projeto-2{
+.projeto-2 {
   flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
   margin-bottom: 40px;
   margin-top: 40px;
@@ -544,13 +540,11 @@ button[type="submit"]:hover {
   flex-direction: column;
   align-items: center;
   justify-content: space-between; /* Alinha os botões verticalmente */
-
 }
 
 .projetos-container {
   display: flex;
   justify-content: space-between; /* Distribui os projetos com espaço entre eles */
-  
 }
 
 .projetos-container > div {
@@ -583,17 +577,18 @@ button[type="submit"]:hover {
   font-size: 16px;
   color: #494949;
   text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .projeto-1 .botao-p,
 .projeto-2 .botao-p {
   margin-top: 10px;
   padding: 8px 16px;
-  background-color: #836FFF;
+  background-color: #836fff;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
 }
 
@@ -601,7 +596,6 @@ button[type="submit"]:hover {
 .projeto-2 .botao-p:hover {
   background-color: #480999;
 }
-
 
 /* Estilos para as imagens */
 .botoes-projeto {
@@ -623,182 +617,192 @@ button[type="submit"]:hover {
 
 .botao-p .img-www {
   width: 30px; /* Define o tamanho desejado para a imagem */
-  height: auto; 
-  margin-left: 8px;/* Permite que a altura seja ajustada proporcionalmente */
+  height: auto;
+  margin-left: 8px; /* Permite que a altura seja ajustada proporcionalmente */
   /*margin-right: 6px;*/
 }
 
 /* Estilos para os botões */
 .botao-p p {
   color: white;
-  font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
   font-weight: 600;
   text-decoration: none;
   margin: 10px;
-  padding-left: 10px;/* Adiciona um espaçamento à direita do conteúdo */
+  padding-left: 10px; /* Adiciona um espaçamento à direita do conteúdo */
   max-width: 80px; /* Defina o tamanho máximo do texto */
   overflow: hidden; /* Oculta o conteúdo que ultrapassar o tamanho máximo */
   white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
   margin: 0; /* Remove a margem em volta do texto */
 }
 
-.botao-p{
+.botao-p {
   display: flex;
   align-items: center; /*Centraliza verticalmente */
-  width: 120px;
+  width: 110px;
   height: 40px;
   margin: 10px;
-  background-color: #836FFF;
+  background-color: #836fff;
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 1000px;
   cursor: pointer;
-  width: auto;/* Ajusta a largura automaticamente para o conteúdo */
- 
+  width: auto; /* Ajusta a largura automaticamente para o conteúdo */
 }
 /*surface duo*************************************************************************/
 @media screen and (max-width: 630px) {
-  .content-container{
-    flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
+  .content-container {
+    flex-basis: calc(
+      100% - 20px
+    ); /* Define a largura para 100% em telas menores */
     margin: 0 0 0 0;
     flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
   }
-  .profissao{
+  .profissao {
     margin-top: 20px;
   }
 }
 
 /*galaxy fold**************************************************************************/
-  @media screen and (max-width: 280px) {
-    .content-container{
-      flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
-      margin: 0 0 0 0;
-      flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
-    }
-      body {
-        font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
-      }
-    
-      nav a {
-        margin-right: 10px;
-        font-size: 13px; /* Reduza o tamanho da fonte para se adequar à tela menor */
-      }
-    
-      .content-container {
-        flex-direction: column;
-      }
-    
-      .img-botoes-container {
-        margin-left: 0;
-        margin-top: 20px; /* Adicione um espaçamento entre a imagem e o texto */
-      }
-    
-      .minhafoto {
-        width: 200px; /* Reduza o tamanho da imagem para se adequar à tela menor */
-      }
-    
-      .logo-buttons {
-        margin-top: 10px;
-        margin-right: 10px; /* Aumenta a margem direita em 10 pixels */
-      }
-    
-      .botao {
-        width: 50px; /* Reduza o tamanho do botão para se adequar à tela menor */
-        height: 50px; /* Reduza o tamanho do botão para se adequar à tela menor */
-      }
-    
-      .botao-p {
-        width: 90px; /* Reduza o tamanho do botão para se adequar à tela menor */
-        height: 30px; /* Reduza o tamanho do botão para se adequar à tela menor */
-      }
-    
-      .botao-p .img-git {
-        width: 30px; /* Reduza o tamanho da imagem para se adequar à tela menor */
-      }
-    
-      .botao-p .img-www {
-        width: 20px; /* Reduza o tamanho da imagem para se adequar à tela menor */
-      }
-    .profissao{
-      margin-top: 10px;
-      font-size: 40px;
-    }
-      .descricao {
-        font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
-      }
-    
-      .father {
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      .card-hover {
-        width: 150px; /* Reduza o tamanho do card para se adequar à tela menor */
-        height: 150px; /* Reduza o tamanho do card para se adequar à tela menor */
-        margin: 5px;
-        pointer-events: none; /* Nova propriedade adicionada */
-        cursor: default;
-      }
-    
-      .card-hover p {
-        font-size: 16px; /* Reduza o tamanho da fonte para se adequar à tela menor */
-      }
-    
-      .margin-js {
-        margin-top: 3%;
-      }
-    
-      .margin-bt {
-        margin-top: 6%;
-      }
-    
-      .projeto-1,
-      .projeto-2 {
-        flex-basis: 100%; /* Defina a largura dos projetos para 100% da largura do contêiner */
-        margin-left: 10px;
-        margin-right: 10px;
-      }
-    
-      .projeto-1 img,
-      .projeto-2 img {
-        width: 100%; /* Ajuste a largura da imagem para preencher o contêiner */
-        border-radius: 10px;
-      }
-    
-      .projeto-1 h2,
-      .projeto-2 h2 {
-        font-size: 18px; /* Reduza o tamanho da fonte para se adequar à tela menor */
-        margin-top: 5px;
-      }
-    
-      .projeto-1 p,
-      .projeto-2 p {
-        font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
-      }
-    
-      .projeto-1 .botao-p,
-      .projeto-2 .botao-p {
-        padding: 5px 10px; /* Reduza o espaçamento interno do botão para se adequar à tela menor */
-      }
-    
-      .back-to-top {
-        bottom: 10px;
-        right: 10px;
-      }
-    
-      .back-to-top .seta {
-        width: 18px; /* Reduza o tamanho da imagem para se adequar à tela menor */
-      }
+@media screen and (max-width: 280px) {
+  .content-container {
+    flex-basis: calc(
+      100% - 20px
+    ); /* Define a largura para 100% em telas menores */
+    margin: 0 0 0 0;
+    flex-wrap: wrap; /* Quebra a linha quando não há espaço suficiente */
+  }
+  body {
+    font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+  }
 
-      .gmail-font{
-        font-weight: 600;
-        font-size: 16px;
-      }
-    }
-    
+  nav a {
+    margin-right: 10px;
+    font-size: 13px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+  }
+
+  .content-container {
+    flex-direction: column;
+  }
+
+  .img-botoes-container {
+    margin-left: 0;
+    margin-top: 20px; /* Adicione um espaçamento entre a imagem e o texto */
+  }
+
+  .minhafoto {
+    width: 200px; /* Reduza o tamanho da imagem para se adequar à tela menor */
+  }
+
+  .logo-buttons {
+    margin-top: 10px;
+    margin-right: 10px; /* Aumenta a margem direita em 10 pixels */
+  }
+
+  .botao {
+    width: 65px; /* Reduza o tamanho do botão para se adequar à tela menor */
+    height: 65px; /* Reduza o tamanho do botão para se adequar à tela menor */
+  }
+
+  .botao-p {
+    width: 110px; /* Reduza o tamanho do botão para se adequar à tela menor */
+    height: 30px; /* Reduza o tamanho do botão para se adequar à tela menor */
+  }
+
+  .botao-p p {
+    font-size: 12px;
+  }
+
+  .botao-p .img-git {
+    width: 30px; /* Reduza o tamanho da imagem para se adequar à tela menor */
+  }
+
+  .botao-p .img-www {
+    width: 20px; /* Reduza o tamanho da imagem para se adequar à tela menor */
+  }
+  .profissao {
+    margin-top: 10px;
+    font-size: 40px;
+  }
+  .descricao {
+    font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+  }
+
+  .father {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-hover {
+    width: 150px; /* Reduza o tamanho do card para se adequar à tela menor */
+    height: 150px; /* Reduza o tamanho do card para se adequar à tela menor */
+    margin: 5px;
+    pointer-events: none; /* Nova propriedade adicionada */
+    cursor: default;
+  }
+
+  .card-hover p {
+    font-size: 16px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+  }
+
+  .margin-js {
+    margin-top: 3%;
+  }
+
+  .margin-bt {
+    margin-top: 6%;
+  }
+
+  .projeto-1,
+  .projeto-2 {
+    flex-basis: 100%; /* Defina a largura dos projetos para 100% da largura do contêiner */
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .projeto-1 img,
+  .projeto-2 img {
+    width: 100%; /* Ajuste a largura da imagem para preencher o contêiner */
+    border-radius: 10px;
+  }
+
+  .projeto-1 h2,
+  .projeto-2 h2 {
+    font-size: 18px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+    margin-top: 5px;
+  }
+
+  .projeto-1 p,
+  .projeto-2 p {
+    font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+  }
+
+  .projeto-1 .botao-p,
+  .projeto-2 .botao-p {
+    padding: 5px 10px; /* Reduza o espaçamento interno do botão para se adequar à tela menor */
+  }
+
+  .back-to-top {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .back-to-top .seta {
+    width: 18px; /* Reduza o tamanho da imagem para se adequar à tela menor */
+  }
+
+  .gmail-font {
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 1212px) {
   .projeto-1,
   .projeto-2 {
-    flex-basis: calc(100% - 20px); /* Define a largura para 100% em telas menores */
+    flex-basis: calc(
+      100% - 20px
+    ); /* Define a largura para 100% em telas menores */
     margin: 0 0 0 0;
   }
   .projetos-container {
@@ -820,30 +824,39 @@ button[type="submit"]:hover {
   text-decoration: none;
   margin-right: 0px;
 }
-.back-to-top .seta{
+.back-to-top .seta {
   width: 22px;
 }
 
 /*********************************/
 
 .titulo-degrade {
-  background: linear-gradient(to right, #836FFF, #26136e);
+  background: linear-gradient(to right, #836fff, #26136e);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 /* ... */
 
-
 /* Defina as propriedades de animação */
 @keyframes fade-in {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-up {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Adicione as classes de animação */
@@ -974,7 +987,6 @@ body {
   transform: translateY(-50%);
 }
 
-
 /* Estilos para telas menores */
 @media screen and (max-width: 768px) {
   .menu-toggle {
@@ -1001,18 +1013,16 @@ body {
   }
 }
 
-
-
 /*nav mobile*/
 @media screen and (max-width: 560px) {
-  .pcnav{
-    display:none;
+  .pcnav {
+    display: none;
   }
-  nav{
+  nav {
     height: 50px;
   }
-  header{
-  height: 65px;
+  header {
+    height: 65px;
   }
   .left-aligned {
     margin-right: 200px;
@@ -1027,11 +1037,10 @@ body {
   }
   .nome-completo {
     margin-top: 100px;
-}
-}
-@media screen and (min-width: 545px) {
-  #menu-btn{
-    display:none;
   }
 }
-
+@media screen and (min-width: 545px) {
+  #menu-btn {
+    display: none;
+  }
+}
