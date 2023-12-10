@@ -23,30 +23,31 @@ nav a {
     "Lucida Sans", Arial, sans-serif;
   color: rgb(0, 0, 0);
 }
-
-.nav-link {
+.pcnav a {
   position: relative;
-  display: inline-block;
-  margin-right: 25px;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-.nav-link::after {
+.pcnav a::after {
   content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #8758ff;
   position: absolute;
-  bottom: -5px; /* Aumente o valor para aumentar a margem */
-  left: 25%; /* Coloca a linha na metade da largura do elemento pai */
-  width: 50%; /* Define a largura da linha como metade do elemento pai */
-  height: 3px; /* Define a espessura da linha */
-  background-color: #8758ff; /* Substitua "red" pela cor desejada */
-  transform: translateX(
-    -50%
-  ); /* Move a linha para a esquerda em metade de sua própria largura */
-  transition: width 0.3s ease; /* Adiciona uma transição suave ao encurtar a linha */
-  border-radius: 3px; /* Arredonda as pontas da linha */
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s;
 }
 
-.nav-link:hover::after {
-  width: 0; /* Encurta a linha para zero */
+.pcnav a.active::after {
+  width: 100%;
+}
+
+.pcnav a:hover::after {
+  width: 100%;
 }
 
 header {
@@ -72,17 +73,17 @@ header {
   font-size: 30px;
   cursor: pointer;
   background: #6f5fc7;
-  color: #390ca3;
+  color: #ffffff;
   text-align: center;
   z-index: 1000;
 }
-#menu-btn img {
-  width: 30px;
-}
+
 #menu-btn.fa-times {
   transform: rotate(180deg);
+  width: 30px;
+  height: 30px;
   background: #3f1b84; /*cor ao clicar*/
-  color: #aaaaaa00;
+  color: #ffffff;
 }
 
 .menu-btn1 {
@@ -386,15 +387,15 @@ textarea {
 }
 
 button[type="submit"] {
-  padding: 7px 30px;
+  padding: 7px 20px;
   background-color: #8758ff;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
     sans-serif;
   font-weight: bold;
   border: none;
-  border-radius: 50px;
+  border-radius: 20px;
   cursor: pointer;
 }
 
@@ -423,44 +424,34 @@ button[type="submit"]:hover {
   .img-botoes-container {
     margin-left: 0px;
   }
-}
-
-/*Botoes de contato primeira parte*/
-.botoes-container {
-  margin-top: 10px;
-  margin-right: 60px;
-}
-
-.logo-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-right: 20px; /* Aumenta a margem direita em 20 pixels */
-  margin-left: 20px;
+  .botoes-container {
+    margin-top: 10px;
+    margin-right: 60px;
+  }
 }
 
 .botao {
-  display: inline-block;
-  width: 70px;
-  height: 70px;
-  margin: 10px;
-  background-color: #836fff;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  border-radius: 50%;
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); /* Adicione esta propriedade para a sombra */
+  width: 50px; /* Ajuste conforme necessário */
+  height: 50px; /* Ajuste conforme necessário */
+  background-color: #333; /* Cor de fundo dos botões */
+  margin: 10px; /* Espaçamento entre os botões */
+  border-radius: 50%; /* Torna os botões circulares */
 }
 
-.botoes-container .botao img {
-  width: 50px;
-  height: 50px;
+.botao i {
+  color: white;
 }
-
+.logo-buttons {
+  display: flex;
+  justify-content: center; /* Alinha os botões horizontalmente */
+  align-items: center;
+}
 .botao:hover {
   background-color: #510dac;
-  width: 69px;
-  height: 69px;
 }
 
 .img-linkedin {
@@ -549,6 +540,7 @@ button[type="submit"]:hover {
 
 .projetos-container > div {
   flex-basis: calc(50% - 20px);
+  margin-top: 0%;
   margin-bottom: 40px;
   border: 1.9px solid #cacaca;
   background-color: #ffffff;
@@ -588,7 +580,7 @@ button[type="submit"]:hover {
   background-color: #836fff;
   color: #fff;
   border: none;
-  border-radius: 50px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -640,12 +632,12 @@ button[type="submit"]:hover {
 .botao-p {
   display: flex;
   align-items: center; /*Centraliza verticalmente */
-  width: 110px;
+  width: 120px;
   height: 40px;
   margin: 10px;
   background-color: #836fff;
   text-decoration: none;
-  border-radius: 1000px;
+  border-radius: 50%;
   cursor: pointer;
   width: auto; /* Ajusta a largura automaticamente para o conteúdo */
 }
@@ -700,17 +692,13 @@ button[type="submit"]:hover {
   }
 
   .botao {
-    width: 65px; /* Reduza o tamanho do botão para se adequar à tela menor */
-    height: 65px; /* Reduza o tamanho do botão para se adequar à tela menor */
+    width: 50px; /* Reduza o tamanho do botão para se adequar à tela menor */
+    height: 50px; /* Reduza o tamanho do botão para se adequar à tela menor */
   }
 
   .botao-p {
-    width: 110px; /* Reduza o tamanho do botão para se adequar à tela menor */
+    width: 90px; /* Reduza o tamanho do botão para se adequar à tela menor */
     height: 30px; /* Reduza o tamanho do botão para se adequar à tela menor */
-  }
-
-  .botao-p p {
-    font-size: 12px;
   }
 
   .botao-p .img-git {
@@ -906,15 +894,13 @@ button[type="submit"]:hover {
 }
 
 @keyframes zoom {
-
   50% {
     transform: scale(0.9);
   }
   100% {
     transform: scale(1);
   }
-}
-*/
+} /*/
 
 .divider {
   border-top: 2px solid #cbcaca; /* Defina a cor e o estilo da linha */
