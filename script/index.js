@@ -159,3 +159,16 @@ window.addEventListener("scroll", function () {
     });
   });
 });
+
+/*header*/
+window.addEventListener("scroll", function () {
+  var header = document.querySelector(".page-header");
+  var scrollPosition = window.scrollY;
+
+  if (scrollPosition > 50) {
+    // ou qualquer valor que preferir
+    header.classList.add("header-shadow");
+  } else {
+    header.classList.remove("header-shadow");
+  }
+});

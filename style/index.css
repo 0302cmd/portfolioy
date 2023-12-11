@@ -13,7 +13,10 @@ nav {
   align-items: center; /* Centraliza verticalmente */
   padding: 30px;
 }
-
+h2 {
+  color: #3f3f3f;
+  font-size: 23px;
+}
 nav a {
   margin-right: 25px;
   text-decoration: none;
@@ -56,8 +59,15 @@ header {
   top: 0;
   width: 100%;
   background-color: #f2f2f2;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1; /* Adicione um índice Z para que a barra de navegação fique acima dos cards */
+}
+.page-header {
+  transition: box-shadow 0.3s ease; /* Adiciona uma transição suave para a sombra */
+}
+
+.header-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Sombra desejada */
 }
 
 #menu-btn {
@@ -72,8 +82,8 @@ header {
   border-radius: 50%;
   font-size: 30px;
   cursor: pointer;
-  background: #6f5fc7;
-  color: #ffffff;
+  /*background: #6f5fc7;*/
+  color: #836fff;
   text-align: center;
   z-index: 1000;
 }
@@ -222,14 +232,21 @@ h1 {
 
 .profissao {
   margin-top: 0;
-  font-size: 48px;
+  font-size: 73px;
   text-align: center; /* Centraliza o texto */
-  font-family: helvetica;
-  color: #8758ff;
+  font-family: "Belanosima", sans-serif; /* Substitua 'Montserrat' pela fonte desejada */
+  color: #836fff;
   margin-bottom: 0px;
-  text-shadow: 2px 2px 4px rgba(131, 111, 255, 0.3); /* Ajuste a cor da sombra para corresponder à cor do texto */
+  /*text-shadow: 2px 2px 4px rgba(131, 111, 255, 0.3);  Ajuste a cor da sombra para corresponder à cor do texto */
 }
-
+.absolute {
+  margin-top: 10000px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
 /* Estilo para a caixa invisível */
 .invisible-box {
   display: none;
@@ -254,7 +271,7 @@ h1 {
 
 .card {
   width: 100%; /* Defina a largura desejada para os cards */
-  height: 10px;
+  height: 100%;
   text-align: center;
   padding: 10px;
 }
@@ -269,11 +286,10 @@ h1 {
 .card .titulo-projeto {
   margin-top: 20px;
   font-size: 26px;
-  color: #000000d4;
 }
 
 .card h2 {
-  color: #0e0e0e;
+  color: #333;
   font-size: 24px;
   margin-bottom: 10px;
   margin-top: 20px;
@@ -281,28 +297,30 @@ h1 {
 
 .card-hover {
   position: relative;
-  width: 80px; /* Reduza a largura dos cards para 200px */
-  height: 190px; /* Reduza a altura dos cards para 300px */
-  background-color: #f2f2f2; /*fundo dos cartoes habilidades*/
+  width: 150px; /* Reduza a largura dos cards para 200px */
+  height: 150px; /* Reduza a altura dos cards para 300px */
+  /*background-color: #915b5b; /*fundo dos cartoes habilidades*/
   border-radius: 10px;
-  margin: 10px;
+  margin: 8px;
+
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
   margin-bottom: 20px;
 }
 
-.card-hover p {
+.card p {
+  /* Se desejar, centralize verticalmente o texto dentro do card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 20px;
   font-weight: 550;
-  color: rgb(39, 39, 39);
-  /*text-shadow: 0.1em 0.1em 0.05em #333;*/
 }
-
 .margin-js {
   margin-top: 6%;
 }
@@ -324,6 +342,7 @@ h1 {
 .logo-css {
   width: 71px;
   margin: 10px;
+  align-content: center;
 }
 
 .logo-react {
@@ -476,7 +495,7 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: space-between;
   align-items: center; /* Alinha os itens verticalmente */
-  padding: 20px;
+  padding: 35px;
   flex-direction: column;
 }
 
@@ -542,8 +561,9 @@ button[type="submit"]:hover {
   flex-basis: calc(50% - 20px);
   margin-top: 0%;
   margin-bottom: 40px;
-  border: 1.9px solid #cacaca;
+  border: none;
   background-color: #ffffff;
+  box-shadow: 3px 3px 5px 0px rgba(73, 74, 74, 0.11); /* Sombra azul clara */
   border-radius: 10px;
   padding: 10px;
   box-sizing: border-box;
@@ -558,17 +578,20 @@ button[type="submit"]:hover {
 .projeto-1 h2,
 .projeto-2 h2 {
   margin-top: 10px;
-  font-size: 24px;
-  color: #131313;
+  font-size: 27px;
+  padding: 5px;
+  color: #22a4e0fb;
   font-family: Helvetica, sans-serif;
 }
 
 .projeto-1 p,
 .projeto-2 p {
-  margin-top: 10px;
   font-size: 16px;
-  color: #494949;
-  text-align: center;
+  color: #6d6d6d;
+  text-align: justify;
+  margin-top: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
@@ -580,7 +603,7 @@ button[type="submit"]:hover {
   background-color: #836fff;
   color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
 }
 
@@ -616,13 +639,12 @@ button[type="submit"]:hover {
 
 /* Estilos para os botões */
 .botao-p p {
+  text-align: center;
   color: white;
   font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
     sans-serif;
   font-weight: 600;
   text-decoration: none;
-  margin: 10px;
-  padding-left: 10px; /* Adiciona um espaçamento à direita do conteúdo */
   max-width: 80px; /* Defina o tamanho máximo do texto */
   overflow: hidden; /* Oculta o conteúdo que ultrapassar o tamanho máximo */
   white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
@@ -632,14 +654,19 @@ button[type="submit"]:hover {
 .botao-p {
   display: flex;
   align-items: center; /*Centraliza verticalmente */
-  width: 120px;
+  width: 130px;
   height: 40px;
   margin: 10px;
-  background-color: #836fff;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #8a4bff, #66d9ff);
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 50px;
   cursor: pointer;
   width: auto; /* Ajusta a largura automaticamente para o conteúdo */
+}
+
+.botao-p:hover {
+  background: linear-gradient(to right, #66d9ff, #8a4bff);
 }
 /*surface duo*************************************************************************/
 @media screen and (max-width: 630px) {
@@ -701,13 +728,6 @@ button[type="submit"]:hover {
     height: 30px; /* Reduza o tamanho do botão para se adequar à tela menor */
   }
 
-  .botao-p .img-git {
-    width: 30px; /* Reduza o tamanho da imagem para se adequar à tela menor */
-  }
-
-  .botao-p .img-www {
-    width: 20px; /* Reduza o tamanho da imagem para se adequar à tela menor */
-  }
   .profissao {
     margin-top: 10px;
     font-size: 40px;
@@ -966,7 +986,7 @@ body {
   font-size: 20px;
 }
 .ycircle {
-  width: 40px;
+  width: 35px;
   position: absolute;
   left: 40px;
   top: 50%;
@@ -997,6 +1017,10 @@ body {
   .menu-toggle:checked ~ .menu-items {
     display: block;
   }
+
+  .profissao {
+    font-size: 50px;
+  }
 }
 
 /*nav mobile*/
@@ -1015,7 +1039,7 @@ body {
     font-size: 20px;
   }
   .ycircle {
-    width: 50px;
+    width: 35px;
     position: absolute;
     left: 20px;
     top: 50%;

@@ -3,6 +3,9 @@
 
 <head>
   <link rel="shortcut icon" href="image/y.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Belanosima&family=Bungee+Shade&family=Libre+Baskerville&family=Rampart+One&family=Roboto&family=Tilt+Warp&display=swap" rel="stylesheet">
   <link href="fontawesome-free-6.5.1-web/fontawesome-free-6.5.1-web/css/all.css" rel="stylesheet">
   <title>Portfólio Yasmim</title>
   <meta charset="utf-8">
@@ -13,7 +16,7 @@
 </head>
 
 <body>
-  <header>
+  <header class="page-header">
     <nav>
       <div class="logo-nav">
         <span class="left-aligned">
@@ -48,7 +51,9 @@
           <div class="text-container ">
             <h2 class="nome-completo">Oi, eu sou a Yasmim</h2>
             <h1 class="profissao fade-in">FRONTEND<br>DEVELOPER</h1>
-            <p class="descricao fade-in">Estou animada para trazer minhas<br> habilidades para impulsionar o<br>sucesso de projetos inovadores.</p>
+            <div class="descricao-container">
+              <p class="descricao fade-in">Estou animada para trazer minhas habilidades<br>para impulsionar o sucesso de projetos inovadores.</p>
+            </div>
           </div>
 
           <div class="img-botoes-container">
@@ -72,8 +77,9 @@
           </div>
         </div>
       </article>
+      <img class="absolute" src="image/shape.svg" alt="">
     </section>
-    <hr class="divider">
+
     <section id="habilidades" class="dark-bg section second-section fade-up">
       <article>
         <div>
@@ -127,14 +133,11 @@
               <p class="margin-bt fade-up">Bootstrap</p>
             </div>
 
-
-
           </div>
         </div>
       </article>
     </section>
 
-    <hr class="divider">
     <section id="projetos">
       <article>
         <div>
@@ -149,14 +152,14 @@
             <div class="botoes-projeto">
               <a href="https://github.com/0302cmd/previsao-do-tempo" target="_blank">
                 <button class="botao-p">
-                  <p>Código</p>
-                  <img class="img-git" src="image/git_hub.png" alt="Logo">
+                  <p>Código </p>
+
                 </button>
               </a>
               <a href="https://previsao-do-tempo-rho.vercel.app/" target="_blank">
                 <button class="botao-p">
-                  <p>Web Site</p>
-                  <img class="img-www" src="image/www.png" alt="Logo">
+                  <p>Ver Site</p>
+
                 </button>
               </a>
             </div>
@@ -165,18 +168,18 @@
           <div class="projeto-2">
             <img src="image/mockup-tab.jpg" alt="Segundo Projeto">
             <h2>Clínica Veterinária</h2>
-            <p>Um website para uma clínica veterinária, apresentando serviços, <br>informações sobre veterinários e meios de contato.</p>
+            <p>Um website para uma clínica veterinária, apresentando serviços, informações sobre veterinários e meios de contato.</p>
             <div class="botoes-projeto">
               <a href="https://github.com/0302cmd/pet-life" target="_blank">
                 <button class="botao-p">
                   <p>Código</p>
-                  <img class="img-git" src="image/git_hub.png" alt="Logo">
+
                 </button>
               </a>
               <a href="https://pet-life-brown.vercel.app/" target="_blank">
                 <button class="botao-p">
-                  <p>Web Site</p>
-                  <img class="img-www" src="image/www.png" alt="Logo">
+                  <p>Ver Site</p>
+
                 </button>
               </a>
             </div>
@@ -192,13 +195,13 @@
               <a href="https://github.com/0302cmd/clothing-store" target="_blank">
                 <button class="botao-p">
                   <p>Código</p>
-                  <img class="img-git" src="image/git_hub.png" alt="Logo">
+
                 </button>
               </a>
               <a href="https://0302cmd.github.io/clothing-store/" target="_blank">
                 <button class="botao-p">
-                  <p>Web Site</p>
-                  <img class="img-www" src="image/www.png" alt="Logo">
+                  <p>Ver Site</p>
+
                 </button>
               </a>
             </div>
@@ -213,13 +216,12 @@
               <a href="https://github.com/0302cmd/coffee-shop" target="_blank">
                 <button class="botao-p">
                   <p>Código</p>
-                  <img class="img-git" src="image/git_hub.png" alt="Logo">
+
                 </button>
               </a>
               <a href="https://0302cmd.github.io/coffee-shop/" target="_blank">
                 <button class="botao-p">
-                  <p>Web Site</p>
-                  <img class="img-www" src="image/www.png" alt="Logo">
+                  <p>Ver Site</p>
                 </button>
               </a>
             </div>
@@ -229,25 +231,24 @@
       </article>
     </section>
 
-    <hr class="divider">
     <section id="contato" class="dark-bg">
       <div>
         <h1 class="topico fade-up">Contato</h1>
       </div>
-      <p class="descricao">Estou pronta para contribuir com seu projeto.<br>Entre em contato!</p>
+      <p class="descricao">Estou pronta para contribuir com seu projeto. Entre em contato!</p>
       <div class="form-container">
         <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
           <div class="form-group">
             <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" id="name" name="name" required placeholder="Digite seu nome">
           </div>
           <div class="form-group">
             <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" required required placeholder="Digite seu e-mail">
           </div>
           <div class="form-group">
             <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea id="message" name="message" required placeholder="Digite uma mensagem..."></textarea>
           </div>
           <div class="btn-enviar">
             <button type="submit">Enviar</button>
@@ -261,13 +262,17 @@
   <footer class="main-footer">
     <div class="main-container">
 
-      <div class="footer-icon">
-        <a target="_blank" rel="noreferrer" href="mailto:yasmimcastro333@gmail.com">
-          <img class="footer-icon" src="image/logo-gmail.png" alt="icon" title="Gmail" />
+      <div class="logo-buttons fade-up">
+        <a class="botao" href="https://www.linkedin.com/in/yasmim-castro-silva" target="_blank" title="LinkedIn">
+          <i class="fab fa-linkedin fa-2x" style="color: white;"></i>
         </a>
-        <p class="gmail-font">yasmimcastro333@gmail.com</p>
+        <a class="botao" href="https://github.com/0302cmd" target="_blank" title="GitHub">
+          <i class="fab fa-github fa-2x" style="color: white;"></i>
+        </a>
+        <a class="botao" href="mailto:yasmimcastro333@gmail.com" target="_blank" title="Gmail">
+          <i class="fa-solid fa-envelope fa-2x" style="color: white;"></i>
+        </a>
       </div>
-
 
       <div class="main-footer__lower">
         &copy; Copyright 2023. <br>Made by
