@@ -92,7 +92,7 @@ header {
   transform: rotate(180deg);
   width: 30px;
   height: 30px;
-  background: #3f1b84; /*cor ao clicar*/
+  background: #836fff; /*cor ao clicar*/
   color: #ffffff;
 }
 
@@ -104,7 +104,7 @@ header {
 
 .btn-enviar {
   margin-left: auto;
-  text-align: right; /* Alinha o conteúdo do botão à direita */
+  text-align: center; /* Alinha o conteúdo do botão à direita */
   margin-right: 9px; /* Adiciona uma margem à direita para criar espaço entre o botão e o formulário */
 }
 
@@ -256,8 +256,8 @@ h1 {
   /*font-weight: 100;*/
   font-size: 37px;
   margin-top: 70px;
-  color: #19a0df;
-  font-family: Helvetica, sans-serif;
+  color: #308eede1;
+  font-family: "Outfit", sans-serif;
   font-weight: bold;
 }
 
@@ -280,7 +280,7 @@ h1 {
   margin-top: 20px; /* Adicione um espaçamento entre a barra de navegação e os cards */
   padding-top: 5px; /* Adicione um espaçamento interno no topo do container dos cards */
   padding-bottom: 5px;
-  margin-bottom: 120px; /* Aumenta o espaço inferior da seção habilidades */
+  margin-bottom: 10px; /* Aumenta o espaço inferior da seção habilidades */
 }
 
 .card .titulo-projeto {
@@ -388,8 +388,9 @@ h1 {
 }
 
 label {
+  color: #3f3f3f;
   display: block;
-  font-weight: bold;
+  font-weight: 600;
   margin-bottom: 5px;
   margin-left: 0%;
 }
@@ -403,11 +404,12 @@ textarea {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  font-family: "helvetica";
 }
 
 button[type="submit"] {
-  padding: 7px 20px;
-  background-color: #8758ff;
+  padding: 7px 30px;
+  background-color: #836fff;
   color: #fff;
   font-size: 16px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
@@ -424,7 +426,7 @@ button[type="submit"]:hover {
 
 .dark-bg {
   /*background-color: #eeeeee;*/
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
   margin-bottom: 0px; /* Adiciona espaço entre a seção e o rodapé */
 }
 
@@ -470,7 +472,7 @@ button[type="submit"]:hover {
   align-items: center;
 }
 .botao:hover {
-  background-color: #510dac;
+  background-color: #4f439c;
 }
 
 .img-linkedin {
@@ -489,6 +491,12 @@ button[type="submit"]:hover {
 }
 
 /*footer*************************************************************/
+.text-btfooter {
+  font-weight: 600;
+  font-family: "Roboto", "Times New Roman", Times, serif;
+  text-align: center;
+}
+
 .main-footer {
   background: #685bbdce;
   color: #fff;
@@ -537,7 +545,6 @@ button[type="submit"]:hover {
   align-items: center;
   justify-content: space-between; /* Alinha os botões verticalmente */
 }
-
 .projeto-2 {
   flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
   margin-bottom: 40px;
@@ -551,7 +558,6 @@ button[type="submit"]:hover {
   align-items: center;
   justify-content: space-between; /* Alinha os botões verticalmente */
 }
-
 .projetos-container {
   display: flex;
   justify-content: space-between; /* Distribui os projetos com espaço entre eles */
@@ -560,7 +566,7 @@ button[type="submit"]:hover {
 .projetos-container > div {
   flex-basis: calc(50% - 20px);
   margin-top: 0%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   border: none;
   background-color: #ffffff;
   box-shadow: 3px 3px 5px 0px rgba(73, 74, 74, 0.11); /* Sombra azul clara */
@@ -580,8 +586,8 @@ button[type="submit"]:hover {
   margin-top: 10px;
   font-size: 27px;
   padding: 5px;
-  color: #22a4e0fb;
-  font-family: Helvetica, sans-serif;
+  color: #373737;
+  font-family: "Outfit", sans-serif;
 }
 
 .projeto-1 p,
@@ -1054,3 +1060,19 @@ body {
     display: none;
   }
 }
+/*
+.fundo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.conteudo {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 50px;
+}
+<img class="fundo" src="conceito-de-fundo-branco-textura-elegante/img-back.jpg" alt=""> */
