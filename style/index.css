@@ -358,15 +358,21 @@ h1 {
 .logo-bootstrap {
   width: 100px;
 }
-
+.descricao-container {
+  max-width: 400px;
+}
 .descricao {
   font-family: trebuchet ms;
   color: rgb(78, 78, 78);
   font-weight: bold;
-  font-size: 17px;
+  font-size: 16px;
+  text-align: justify;
+  word-spacing: -1px; /* Ajuste conforme necessário */
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-/*Formulario de contato*/
+/*Formulario de contato**************************************************************/
 
 .form-container {
   display: flex;
@@ -377,10 +383,10 @@ h1 {
 }
 
 #contact-form {
-  background-color: #fff;
+  background-color: #f2f2f2;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px #836fff;
 }
 
 .form-group {
@@ -388,19 +394,23 @@ h1 {
 }
 
 label {
-  color: #3f3f3f;
+  color: #8758ff;
   display: block;
   font-weight: 600;
   margin-bottom: 5px;
   margin-left: 0%;
 }
 
+textarea {
+  padding-right: 30px; /* Espaço para o ícone dentro do campo de texto */
+}
+
 input,
 textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #e2e2e2;
-  border-radius: 5px;
+  border: 1px solid #836fff;
+  border-radius: 10px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -408,7 +418,7 @@ textarea {
 }
 
 button[type="submit"] {
-  padding: 7px 30px;
+  padding: 8px 30px;
   background-color: #836fff;
   color: #fff;
   font-size: 16px;
@@ -423,10 +433,12 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #480999;
 }
-
+.icon-increase {
+  font-size: 50px; /* Tamanho padrão */
+}
 .dark-bg {
   /*background-color: #eeeeee;*/
-  background-color: #f4f4f4;
+  background-color: #f2f2f2;
   margin-bottom: 0px; /* Adiciona espaço entre a seção e o rodapé */
 }
 
@@ -740,6 +752,11 @@ button[type="submit"]:hover {
   }
   .descricao {
     font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
+    word-spacing: -3px; /* Ajuste conforme necessário */
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .father {
@@ -841,7 +858,12 @@ button[type="submit"]:hover {
 .back-to-top .seta {
   width: 22px;
 }
-
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+  .icon-increase {
+    font-size: 16px; /* Reduz o tamanho para telas menores */
+  }
+}
 /*********************************/
 
 .titulo-degrade {
@@ -1026,6 +1048,16 @@ body {
 
   .profissao {
     font-size: 50px;
+  }
+  .text-container {
+    flex-direction: column;
+  }
+  .descricao {
+    word-spacing: -3px; /* Ajuste conforme necessário */
+    padding-right: 12px;
+    padding-left: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
