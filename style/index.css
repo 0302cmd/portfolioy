@@ -383,7 +383,7 @@ h1 {
 }
 
 #contact-form {
-  background-color: #f2f2f2;
+  background-color: #f1f1f1;
   padding: 30px;
   border-radius: 5px;
   box-shadow: 0 2px 4px #836fff;
@@ -545,11 +545,11 @@ button[type="submit"]:hover {
   margin-top: 0px; /* Adiciona espaço entre as seções e o rodapé */
 }
 
-.projeto-1 {
+.projeto-1,
+.projeto-3 {
   flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
   margin-bottom: 40px;
   margin-top: 40px;
-  margin-left: 250px;
   border-radius: 10px; /* Define a borda arredondada */
   padding: 10px; /* Adiciona um espaçamento interno */
   display: flex;
@@ -557,12 +557,11 @@ button[type="submit"]:hover {
   align-items: center;
   justify-content: space-between; /* Alinha os botões verticalmente */
 }
-.projeto-2 {
+.projeto-2,
+.projeto-4 {
   flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
   margin-bottom: 40px;
   margin-top: 40px;
-  margin-left: 20px;
-  margin-right: 250px;
   border-radius: 10px; /* Define a borda arredondada */
   padding: 10px; /* Adiciona um espaçamento interno */
   display: flex;
@@ -576,6 +575,7 @@ button[type="submit"]:hover {
 }
 
 .projetos-container > div {
+  max-width: 400px;
   flex-basis: calc(50% - 20px);
   margin-top: 0%;
   margin-bottom: 20px;
@@ -588,13 +588,17 @@ button[type="submit"]:hover {
 }
 
 .projeto-1 img,
-.projeto-2 img {
-  width: 200px; /* Defina a largura desejada para a imagem */
+.projeto-2 img,
+.projeto-3 img,
+.projeto-4 img {
+  width: 300px; /* Defina a largura desejada para a imagem */
   border-radius: 10px;
 }
 
 .projeto-1 h2,
-.projeto-2 h2 {
+.projeto-2 h2,
+.projeto-3 h2,
+.projeto-4 h2 {
   margin-top: 10px;
   font-size: 27px;
   padding: 5px;
@@ -603,10 +607,11 @@ button[type="submit"]:hover {
 }
 
 .projeto-1 p,
-.projeto-2 p {
+.projeto-2 p,
+.projeto-3 p,
+.projeto-4 p {
   font-size: 16px;
   color: #6d6d6d;
-  text-align: justify;
   margin-top: 3px;
   padding-right: 10px;
   padding-left: 10px;
@@ -615,7 +620,9 @@ button[type="submit"]:hover {
 }
 
 .projeto-1 .botao-p,
-.projeto-2 .botao-p {
+.projeto-2 .botao-p,
+.projeto-3 .botao-p,
+.projeto-4 .botao-p {
   margin-top: 10px;
   padding: 8px 16px;
   background-color: #836fff;
@@ -785,26 +792,34 @@ button[type="submit"]:hover {
   }
 
   .projeto-1,
-  .projeto-2 {
+  .projeto-2,
+  .projeto-3,
+  .projeto-4 {
     flex-basis: 100%; /* Defina a largura dos projetos para 100% da largura do contêiner */
     margin-left: 10px;
     margin-right: 10px;
   }
 
   .projeto-1 img,
-  .projeto-2 img {
+  .projeto-2 img,
+  .projeto-3 img,
+  .projeto-4 img {
     width: 100%; /* Ajuste a largura da imagem para preencher o contêiner */
     border-radius: 10px;
   }
 
   .projeto-1 h2,
-  .projeto-2 h2 {
+  .projeto-2 h2,
+  .projeto-3 h2,
+  .projeto-4 h2 {
     font-size: 18px; /* Reduza o tamanho da fonte para se adequar à tela menor */
     margin-top: 5px;
   }
 
   .projeto-1 p,
-  .projeto-2 p {
+  .projeto-2 p,
+  .projeto-4 p,
+  .projeto-4 p {
     font-size: 14px; /* Reduza o tamanho da fonte para se adequar à tela menor */
   }
 

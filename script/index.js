@@ -172,3 +172,18 @@ window.addEventListener("scroll", function () {
     header.classList.remove("header-shadow");
   }
 });
+
+window.addEventListener("scroll", function () {
+  var windowHeight = window.innerHeight;
+  var projectsSection = document.getElementById("projetos").offsetTop;
+
+  if (windowHeight + window.scrollY > projectsSection) {
+    document
+      .querySelectorAll(".projetos-container > div")
+      .forEach(function (projeto, index) {
+        setTimeout(function () {
+          projeto.classList.add("visible");
+        }, index * 200);
+      });
+  }
+});
