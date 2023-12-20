@@ -21,34 +21,61 @@ body {
 
 /* Estilize a caixa de seleção */
 .theme-switch input[type="checkbox"] {
-  appearance: none;
-  width: 40px;
-  height: 20px;
-  background: #ccc;
-  border-radius: 20px;
-  position: relative;
-  outline: none;
+  display: none; /* Oculta a caixa de seleção nativa */
 }
 
-.theme-switch input[type="checkbox"]:before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
+.theme-switch .label {
+  background-color: rgb(108, 150, 228);
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  height: 10px;
+  width: 34px;
+  transform: scale(1.5);
+  margin-top: 4px;
+}
+
+.theme-switch .ball {
+  background-color: #fff;
   border-radius: 50%;
-  background: #fff;
+  position: absolute;
   top: 2px;
   left: 2px;
-  transition: 0.3s;
+  height: 20px;
+  width: 20px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+.theme-switch input[type="checkbox"]:checked + .label .ball {
+  transform: translateX(24px);
+}
+.theme-switch input[type="checkbox"]:checked + .label {
+  background-color: rgb(47, 48, 48);
 }
 
-/* Estilize a caixa de seleção quando estiver marcada */
-.theme-switch input[type="checkbox"]:checked {
-  background: #333;
+.sun-icon {
+  color: #f1c40f;
 }
 
-.theme-switch input[type="checkbox"]:checked:before {
-  transform: translateX(20px);
+.moon-icon {
+  color: #f1c40f;
+  display: none; /* Inicialmente, esconda o ícone da lua */
+}
+
+/* Mostre o ícone da lua quando o tema escuro estiver selecionado */
+.theme-switch input[type="checkbox"]:checked + .label .moon-icon {
+  display: block;
+  margin-right: 5px; /* Adapte o espaçamento conforme necessário */
+}
+
+/* Mostre o ícone do sol quando o tema claro estiver selecionado */
+.theme-switch input[type="checkbox"]:not(:checked) + .label .sun-icon {
+  display: block;
+  margin-right: 5px; /* Adapte o espaçamento conforme necessário */
 }
 
 /* Estilo para o tema escuro */
@@ -104,13 +131,74 @@ body {
 /* Mostre o ícone do sol quando o tema claro estiver selecionado */
 .light-theme .sun-icon {
   display: block;
-  margin-right: 5px; /* Adapte o espaçamento conforme necessário */
+  margin-right: 0px; /* Adapte o espaçamento conforme necessário */
+  margin-left: 10px;
 }
 
 /* Mostre o ícone da lua quando o tema escuro estiver selecionado */
 .dark-theme .moon-icon {
   display: block;
   margin-right: 5px; /* Adapte o espaçamento conforme necessário */
+}
+/*dark2*********************************/
+body.dark {
+  background: #292c35;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 5px;
+  position: relative;
+  height: 11px;
+  width: 21px;
+  transform: scale(1.1);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 15px;
+  width: 15px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f1c40f;
+}
+/* Restante do seu CSS existente */
+
+/* Posiciona o ícone do sol à direita */
+.theme-switch .sun-icon {
+  order: 1;
+  margin-left: 22px; /* Adapte o espaçamento conforme necessário */
+}
+
+.theme-switch .moon-icon {
+  order: 2;
+  margin-right: 15px; /* Adapte o espaçamento conforme necessário */
 }
 
 nav {
@@ -469,11 +557,11 @@ h1 {
   max-width: 400px;
 }
 .descricao {
-  font-family: trebuchet ms;
-  color: rgb(78, 78, 78);
-  font-weight: bold;
+  color: rgb(96, 96, 96);
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
   font-size: 16px;
-  text-align: justify;
+  text-align: center;
   word-spacing: -1px; /* Ajuste conforme necessário */
   margin-left: 10px;
   margin-right: 10px;
@@ -1188,7 +1276,6 @@ body {
     flex-direction: column;
   }
   .descricao {
-    word-spacing: -3px; /* Ajuste conforme necessário */
     padding-right: 12px;
     padding-left: 12px;
     margin-left: 10px;
