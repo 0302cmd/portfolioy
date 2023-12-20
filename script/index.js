@@ -187,3 +187,37 @@ window.addEventListener("scroll", function () {
       });
   }
 });
+
+const themeToggle = document.getElementById("theme-toggle");
+const body = document.body;
+const sections = document.querySelectorAll(".page-section");
+
+themeToggle.addEventListener("change", function () {
+  if (this.checked) {
+    body.classList.add("dark-theme");
+    sections.forEach((section) => section.classList.add("dark-theme"));
+  } else {
+    body.classList.remove("dark-theme");
+    sections.forEach((section) => section.classList.remove("dark-theme"));
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const checkbox = document.querySelector("#theme-toggle");
+
+  checkbox.addEventListener("change", function () {
+    if (this.checked) {
+      document.body.classList.add("dark-theme");
+      document.getElementById("habilidades").classList.remove("dark-bg");
+      document.getElementById("contato").classList.remove("dark-bg");
+      // Adicione as classes 'dark-theme' às seções de habilidades e de contato
+      document.getElementById("habilidades").classList.add("dark-theme");
+      document.getElementById("contato").classList.add("dark-theme");
+    } else {
+      document.body.classList.remove("dark-theme");
+      // Remova as classes 'dark-theme' das seções de habilidades e de contato
+      document.getElementById("habilidades").classList.remove("dark-theme");
+      document.getElementById("contato").classList.remove("dark-theme");
+    }
+  });
+});

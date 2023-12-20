@@ -6,6 +6,112 @@ body {
   margin: 0; /*retira a margem branca do lado esquerdo*/
   padding: 0;
 }
+/* Estilos para a caixa de seleção de tema */
+.theme-switch {
+  position: absolute;
+  margin-top: 15px;
+  left: 100px; /* Ajuste conforme necessário para a posição desejada */
+  font-size: 14px;
+}
+
+/* Estilize o rótulo da caixa de seleção */
+.theme-switch label {
+  cursor: pointer;
+}
+
+/* Estilize a caixa de seleção */
+.theme-switch input[type="checkbox"] {
+  appearance: none;
+  width: 40px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+}
+
+.theme-switch input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+/* Estilize a caixa de seleção quando estiver marcada */
+.theme-switch input[type="checkbox"]:checked {
+  background: #333;
+}
+
+.theme-switch input[type="checkbox"]:checked:before {
+  transform: translateX(20px);
+}
+
+/* Estilo para o tema escuro */
+.dark-theme {
+  background-color: #3b3b3b;
+  color: #fff; /* Adicione estilos para outros elementos conforme necessário */
+}
+.dark-theme .projetos-container > div,
+.dark-theme .projetos-container > div h2 {
+  background-color: #525252;
+  color: #fff; /* Adicione estilos para outros elementos conforme necessário */
+}
+.dark-theme nav {
+  background-color: #dff7fee1;
+  max-height: 8px;
+}
+
+.dark-theme #contact-form {
+  background-color: #e9e9e9;
+  color: #614ce8;
+}
+
+.dark-theme #contact-form label {
+  color: #540cb1;
+}
+
+.dark-theme .projetos-container > div p {
+  color: #fff; /* Adicione estilos para outros elementos conforme necessário */
+}
+
+.dark-theme h2,
+.dark-theme h3,
+.dark-theme p,
+.dark-theme {
+  color: #fff; /* Define a cor da fonte para branco */
+}
+.dark-theme .botao {
+  background-color: #3e3579;
+}
+.dark-theme .absolute {
+  display: none;
+}
+/* Adicione estilos para o ícone do sol */
+.sun-icon {
+  display: none; /* Inicialmente, esconda o ícone do sol */
+}
+
+/* Adicione estilos para o ícone da lua */
+.moon-icon {
+  display: none; /* Inicialmente, esconda o ícone da lua */
+}
+
+/* Mostre o ícone do sol quando o tema claro estiver selecionado */
+.light-theme .sun-icon {
+  display: block;
+  margin-right: 5px; /* Adapte o espaçamento conforme necessário */
+}
+
+/* Mostre o ícone da lua quando o tema escuro estiver selecionado */
+.dark-theme .moon-icon {
+  display: block;
+  margin-right: 5px; /* Adapte o espaçamento conforme necessário */
+}
 
 nav {
   display: flex;
@@ -216,6 +322,7 @@ h1 {
 .minhafoto {
   width: 300px;
   border-radius: 50%;
+  margin-top: 12px;
   /*margin-left: 10px;  Espaçamento entre a imagem e o texto */
 }
 
@@ -383,10 +490,10 @@ h1 {
 }
 
 #contact-form {
-  background-color: #f1f1f1;
+  background-color: #ffffff;
   padding: 30px;
   border-radius: 5px;
-  box-shadow: 0 2px 4px #836fff;
+  box-shadow: 0 2px 5px #836fff;
 }
 
 .form-group {
@@ -419,7 +526,7 @@ textarea {
 
 button[type="submit"] {
   padding: 8px 30px;
-  background-color: #836fff;
+  background: linear-gradient(to right, rgb(176, 148, 232), #614ce8);
   color: #fff;
   font-size: 16px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
@@ -624,7 +731,7 @@ button[type="submit"]:hover {
 .projeto-3 .botao-p,
 .projeto-4 .botao-p {
   margin-top: 10px;
-  padding: 8px 16px;
+  padding: 0px 10px;
   background-color: #836fff;
   color: #fff;
   border: none;
@@ -751,8 +858,13 @@ button[type="submit"]:hover {
   .botao-p {
     width: 90px; /* Reduza o tamanho do botão para se adequar à tela menor */
     height: 30px; /* Reduza o tamanho do botão para se adequar à tela menor */
+    margin-top: 10px;
+    padding: 0px 0px;
   }
-
+  .botao-p p {
+    font-size: 14px;
+    margin-left: 0px;
+  }
   .profissao {
     margin-top: 10px;
     font-size: 40px;
@@ -1041,7 +1153,15 @@ body {
   .menu-toggle {
     display: block;
   }
-
+  /* Estilos para a caixa de seleção de tema */
+  .theme-switch {
+    margin-top: 20px;
+    margin-right: 100px; /* Ajuste conforme necessário */
+    font-size: 14px;
+    position: absolute;
+    left: 70px; /* Ajuste conforme necessário para a posição desejada */
+    font-size: 14px;
+  }
   .menu-items {
     display: none;
     flex-direction: column;
