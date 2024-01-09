@@ -6,6 +6,133 @@ body {
   margin: 0; /*retira a margem branca do lado esquerdo*/
   padding: 0;
 }
+
+.topico-h {
+  margin: 15px;
+  font-size: 20px;
+  font-family: "Outfit";
+}
+.icons {
+  font-size: 40px;
+}
+.paragrafo p {
+  text-align: justify; /*Para centralizar o conteúdo interno horizontalmente */
+  max-width: 600px; /* Definindo uma largura máxima para o conteúdo */
+  width: 100%; /* Permitindo que o conteúdo ocupe toda a largura disponível */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #757575;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px; /* Margens de 20px nas laterais */
+}
+
+.projeto {
+  flex: 0 0 auto;
+  width: 300px; /* Largura de cada projeto */
+  margin-right: 20px; /* Espaçamento entre os projetos */
+}
+
+.carousel {
+  box-shadow: 3px 3px 5px 0px rgba(73, 74, 74, 0.11);
+  position: relative;
+  max-width: 600px;
+  margin: auto; /* Centralizar horizontalmente */
+  overflow: hidden;
+  text-align: center; /* Centralizar os botões */
+}
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  margin-bottom: 50px;
+}
+
+.slides {
+  display: flex;
+  overflow-x: hidden;
+  background: #ffffff;
+  border-radius: 8px; /* Borda arredondada */
+  padding: 20px; /* Espaçamento interno */
+}
+
+.slides img {
+  width: 100%;
+  display: block;
+}
+
+#prevBtn,
+#nextBtn {
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.3); /* Adicionando um fundo semitransparente */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#prevBtn {
+  left: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#nextBtn {
+  right: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.card-pj {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  margin: 0 10px; /* Espaçamento entre os cartões */
+}
+
+.card-pj img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.title {
+  padding: 20px;
+  color: #333333;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+.card-btn-pj {
+  font-size: 17px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-bottom: 6px;
+  background-color: #5a9bcd;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 20px;
+  border-width: 0;
+  cursor: pointer;
+}
+
+a:-webkit-any-link {
+  text-decoration: none;
+}
+
 /* Estilos para a caixa de seleção de tema */
 .theme-switch {
   position: absolute;
@@ -79,11 +206,17 @@ body {
   background-color: #333333;
   color: #fff; /* Adicione estilos para outros elementos conforme necessário */
 }
+
+.dark-theme .section {
+  background-color: #333333;
+  color: #fff; /* Adicione estilos para outros elementos conforme necessário */
+}
 .dark-theme .projetos-container > div,
 .dark-theme .projetos-container > div h2 {
   background-color: #525252;
   color: #fff; /* Adicione estilos para outros elementos conforme necessário */
 }
+
 .dark-theme nav {
   background-color: #333333;
   max-height: 8px;
@@ -91,12 +224,15 @@ body {
 .dark-theme .nav-link {
   color: #ffffff;
 }
+.dark-theme nav a {
+  color: #ffffff;
+}
 .dark-theme #contact-form {
   background-color: #e9e9e9;
 }
 .dark-theme .fa-brands {
-  font-size: 70px;
-  color: #8ce2f1;
+  font-size: 50px;
+  color: #5a9bcd;
 }
 .dark-theme #contact-form label {
   color: #333333;
@@ -125,19 +261,27 @@ body {
 }
 
 .dark-theme .profissao {
-  color: #8ce2f1;
+  color: #5a9bcd;
 }
 
 .dark-theme .botao-p {
-  background: #17b3c1;
+  background: #5a9bcd;
 }
 
 .dark-theme #contact-form button {
-  background-color: #17b3c1;
+  background-color: #5a9bcd;
 }
 
 .dark-theme .pcnav a::after {
-  background-color: #8ce2f1;
+  background-color: #5a9bcd;
+}
+
+.dark-theme .navbar {
+  background: #757575;
+}
+
+.dark-theme .navbar a {
+  color: #fff;
 }
 /* Adicione estilos para o ícone do sol */
 .sun-icon {
@@ -253,7 +397,7 @@ nav a {
   display: block;
   width: 0;
   height: 2px;
-  background-color: #4887ce;
+  background-color: #a5a5a5;
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -307,7 +451,7 @@ header {
   transform: rotate(180deg);
   width: 30px;
   height: 30px;
-  background: #2196f3; /*cor ao clicar*/
+  background: #5a9bcd; /*cor ao clicar*/
   color: #ffffff;
 }
 
@@ -344,7 +488,7 @@ header {
   top: 0;
   left: 0;
   z-index: 999;
-  height: 250px;
+  height: 290px;
   width: 100%;
   background: #e9e9e9;
   display: flex;
@@ -359,6 +503,7 @@ header {
   clip-path: circle(140% at 95.3% 8.5%);
 }
 .navbar a {
+  font-family: "Lucida Sans", Arial, sans-serif;
   font-size: 30px;
   padding-bottom: 30px;
   color: #000;
@@ -452,7 +597,7 @@ h1 {
   text-align: center; /* Centraliza o texto */
   font-family: "Belanosima", sans-serif; /* Substitua 'Montserrat' pela fonte desejada */
   /*color: #2491eb;*/
-  color: #0174be;
+  color: #5a9bcd;
   margin-bottom: 0px;
   /*text-shadow: 2px 2px 4px rgba(131, 111, 255, 0.3);  Ajuste a cor da sombra para corresponder à cor do texto */
 }
@@ -488,9 +633,11 @@ h1 {
 
 .card {
   width: 100%; /* Defina a largura desejada para os cards */
-  height: 100%;
+  height: 70%;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
+  border-radius: 100px;
+  box-shadow: 5px 5px 5px #5a9bcd;
 }
 
 .card-container {
@@ -629,7 +776,7 @@ textarea {
 
 button[type="submit"] {
   padding: 8px 30px;
-  background: #0174be;
+  background: #5a9bcd;
   color: #fff;
   font-size: 16px;
   font-family: "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
@@ -779,10 +926,6 @@ button[type="submit"]:hover {
   align-items: center;
   justify-content: space-between; /* Alinha os botões verticalmente */
 }
-.projetos-container {
-  display: flex;
-  justify-content: space-between; /* Distribui os projetos com espaço entre eles */
-}
 
 .projetos-container > div {
   max-width: 400px;
@@ -892,7 +1035,7 @@ button[type="submit"]:hover {
   height: 40px;
   margin: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  background: #0174be;
+  background: #5a9bcd;
   text-decoration: none;
   border-radius: 50px;
   cursor: pointer;
@@ -1346,6 +1489,68 @@ body {
 <img class="fundo" src="conceito-de-fundo-branco-textura-elegante/img-back.jpg" alt=""> */
 
 .fa-brands {
-  font-size: 70px;
-  color: #0174be;
+  font-size: 50px;
+  color: #333333;
+}
+
+/*serviços*/
+.card-s {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  margin: 15px 15px 15px 15px; /* Adiciona espaço na parte direita de cada card */
+  /* Outras estilizações necessárias */
+}
+
+.card-sfather {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+/* Ajustes para os elementos dentro dos cards, se necessário */
+.card-s .circle {
+  color: #fff;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #5a9bcd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-s h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #666;
+}
+.card-s p {
+  font-size: 19px;
+  margin-bottom: 10px;
+  color: #666;
+}
+.icon {
+  font-size: 30px;
+}
+
+.card-s::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #5a9bcd;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }

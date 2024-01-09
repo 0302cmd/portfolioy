@@ -221,3 +221,34 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+//projetos
+let slideIndex = 0;
+showSlide(slideIndex);
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  slideIndex -= 1;
+  showSlide(slideIndex);
+});
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  slideIndex += 1;
+  showSlide(slideIndex);
+});
+
+function showSlide(n) {
+  const slides = document.getElementsByClassName("card-pj");
+
+  if (n >= slides.length) {
+    slideIndex = 0;
+  }
+  if (n < 0) {
+    slideIndex = slides.length - 1;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  slides[slideIndex].style.display = "block";
+}
