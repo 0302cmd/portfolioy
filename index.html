@@ -278,29 +278,53 @@
 
     <section id="contato" class="">
       <div>
-        <h1 class="topico fade-up">Contato</h1>
+        <h1 class="titulo-contato fade-up">Contato</h1>
       </div>
       <p class="descricao">Estou pronta para contribuir com seu projeto. Entre em contato!</p>
-      <div class="form-container">
-        <form id="contact-form" action="https://api.staticforms.xyz/submit" method="post">
-          <div class="form-group">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required placeholder="Digite seu nome">
+
+      <div class="contact1 contact-section">
+        <div class="container-contact1">
+          <div class="contact1-pic js-tilt" data-tilt>
+            <img src="image/imgcontact.png" alt="IMG">
           </div>
-          <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
-          </div>
-          <div class="form-group">
-            <label for="message">Mensagem:</label>
-            <textarea id="message" name="message" required placeholder="Digite uma mensagem..."></textarea>
-          </div>
-          <div class="btn-enviar">
-            <button type="submit">Enviar</button>
-          </div>
-          <input type="hidden" name="accessKey" value="6c42bbcc-bafb-4e6e-b7f6-8f398479a7d4">
-          <input type="hidden" name="redirectTo" value="https://0302cmd.github.io/obrigada/">
-        </form>
+
+          <form action="https://formsubmit.co/yasmimcastro333@gmail.com" method="POST" class="contact1-form validate-form">
+            <span class="contact1-form-title">
+              Entrar em Contato
+            </span>
+
+            <div class="wrap-input1 validate-input" data-validate="Name is required">
+              <input class="input1" type="text" name="name" placeholder="Nome">
+              <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+              <input class="input1" type="email" name="email" placeholder="Email">
+              <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Subject is required">
+              <input class="input1" type="text" name="subject" placeholder="Título">
+              <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Message is required">
+              <textarea class="input1" name="message" placeholder="Mensagem"></textarea>
+              <span class="shadow-input1"></span>
+            </div>
+
+            <div class="container-contact1-form-btn">
+              <button type="submit" class="contact1-form-btn">
+                <span>
+                  Enviar
+
+                </span>
+
+              </button>
+            </div>
+            <input type="hidden" name="_next" value="https://0302cmd.github.io/obrigada/">
+          </form>
+        </div>
       </div>
     </section>
 

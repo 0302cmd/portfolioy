@@ -36,6 +36,9 @@ body {
   width: 300px; /* Largura de cada projeto */
   margin-right: 20px; /* Espaçamento entre os projetos */
 }
+#projetos {
+  margin-bottom: 30px; /* Ajuste o valor conforme necessário */
+}
 
 .carousel {
   box-shadow: 3px 3px 5px 0px rgba(73, 74, 74, 0.11);
@@ -44,6 +47,7 @@ body {
   margin: auto; /* Centralizar horizontalmente */
   overflow: hidden;
   text-align: center; /* Centralizar os botões */
+  margin-bottom: 40px; /* Ajuste o valor conforme necessário */
 }
 .carousel-container {
   display: flex;
@@ -719,7 +723,7 @@ h1 {
   max-width: 400px;
 }
 .descricao {
-  color: rgb(96, 96, 96);
+  color: #fff;
   font-family: Helvetica, sans-serif;
   font-weight: 600;
   font-size: 16px;
@@ -787,9 +791,6 @@ button[type="submit"] {
   cursor: pointer;
 }
 
-button[type="submit"]:hover {
-  background-color: ;
-}
 .icon-increase {
   font-size: 50px; /* Tamanho padrão */
 }
@@ -839,9 +840,6 @@ button[type="submit"]:hover {
   display: flex;
   justify-content: center; /* Alinha os botões horizontalmente */
   align-items: center;
-}
-.botao:hover {
-  background-color: ;
 }
 
 .img-linkedin {
@@ -984,11 +982,6 @@ button[type="submit"]:hover {
   cursor: pointer;
 }
 
-.projeto-1 .botao-p:hover,
-.projeto-2 .botao-p:hover {
-  background-color: ;
-}
-
 /* Estilos para as imagens */
 .botoes-projeto {
   display: flex;
@@ -1042,9 +1035,6 @@ button[type="submit"]:hover {
   width: auto; /* Ajusta a largura automaticamente para o conteúdo */
 }
 
-.botao-p:hover {
-  background: ;
-}
 /*surface duo*************************************************************************/
 @media screen and (max-width: 630px) {
   .content-container {
@@ -1237,12 +1227,6 @@ button[type="submit"]:hover {
   }
 }
 /*********************************/
-
-.titulo-degrade {
-  background: linear-gradient(to right, #836fff, #26136e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 /* ... */
 
@@ -1553,4 +1537,414 @@ body {
   background-color: #5a9bcd;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+/*fundo azul*/
+#contato {
+  background: linear-gradient(135deg, #0077cc, #5a9bcd, #00bfff);
+
+  color: white; /* Define a cor do texto para branco */
+  padding: 50px; /* Adiciona algum espaço interno para o conteúdo */
+  display: flex; /* Permite alinhar a imagem e o formulário lado a lado */
+  align-items: center; /* Alinha os itens verticalmente */
+}
+
+#contato .form-container {
+  flex: 1; /* Ocupa o restante do espaço disponível */
+  padding-left: 20px; /* Adiciona um espaçamento à esquerda para separar a imagem do formulário */
+}
+
+#contato img {
+  max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho da seção */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ RESTYLE TAG ]*/
+/* Estilos que afetam apenas a seção de contato */
+
+.contact-section * {
+  /* Define o estilo para todos os elementos dentro da seção de contato */
+  /* Isso garante que apenas os elementos dentro de .contact-section sejam afetados */
+  /* Por exemplo: */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat-Regular, sans-serif;
+  /* ... e outros estilos específicos */
+  position: relative;
+  z-index: 0; /* Um número maior para o formulário */
+}
+
+/* ... e assim por diante, ajuste os estilos conforme necessário */
+
+/*---------------------------------------------*/
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
+textarea:focus,
+input:focus {
+  border-color: transparent !important;
+}
+
+input::-webkit-input-placeholder {
+  color: #999999;
+}
+input:-moz-placeholder {
+  color: #999999;
+}
+input::-moz-placeholder {
+  color: #999999;
+}
+input:-ms-input-placeholder {
+  color: #999999;
+}
+
+textarea::-webkit-input-placeholder {
+  color: #999999;
+}
+textarea:-moz-placeholder {
+  color: #999999;
+}
+textarea::-moz-placeholder {
+  color: #999999;
+}
+textarea:-ms-input-placeholder {
+  color: #999999;
+}
+
+/*---------------------------------------------*/
+button {
+  outline: none !important;
+  border: none;
+  background: transparent;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+iframe {
+  border: none !important;
+}
+
+/*//////////////////////////////////////////////////////////////////
+[ Contact 1 ]*/
+
+.contact1 {
+  width: 100%;
+  min-height: 100%;
+  padding: 15px;
+
+  /*background: linear-gradient(
+    135deg,
+    #0077cc,
+    #00bfff
+  );  Substitua as cores conforme necessário */
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-contact1 {
+  width: 1163px;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 90px 130px 88px 148px;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.contact1-pic {
+  width: 296px;
+}
+
+.contact1-pic img {
+  max-width: 100%;
+}
+
+/*------------------------------------------------------------------
+[  ]*/
+.contact1-form {
+  width: 390px;
+}
+
+.contact1-form-title {
+  display: block;
+  font-family: Montserrat-ExtraBold;
+  font-size: 24px;
+  color: #333333;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 44px;
+}
+
+input.input1 {
+  height: 50px;
+  border-radius: 25px;
+  padding: 0 30px;
+}
+input.input1 + .shadow-input1 {
+  border-radius: 25px;
+}
+
+textarea.input1 {
+  min-height: 150px;
+  border-radius: 25px;
+  padding: 12px 30px;
+}
+textarea.input1 + .shadow-input1 {
+  border-radius: 25px;
+}
+
+/*---------------------------------------------*/
+.wrap-input1 {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  margin-bottom: 20px;
+}
+
+.input1 {
+  display: block;
+  width: 100%;
+  background: #e6e6e6;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #666666;
+}
+
+.shadow-input1 {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 0px 0px;
+  color: rgba(87, 184, 70, 0.5);
+}
+
+.input1:focus + .shadow-input1 {
+  -webkit-animation: anim-shadow 0.5s ease-in-out forwards;
+  animation: anim-shadow 0.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 80px 30px;
+    opacity: 0;
+  }
+}
+
+@keyframes anim-shadow {
+  to {
+    box-shadow: 0px 0px 80px 30px;
+    opacity: 0;
+  }
+}
+
+/*---------------------------------------------*/
+.container-contact1-form-btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact1-form-btn {
+  min-width: 193px;
+  height: 50px;
+  border-radius: 25px;
+  background: #57b846;
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact1-form-btn i {
+  margin-left: 7px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.contact1-form-btn:hover {
+  background: #333333;
+}
+
+.contact1-form-btn:hover i {
+  -webkit-transform: translateX(10px);
+  -moz-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  -o-transform: translateX(10px);
+  transform: translateX(10px);
+}
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 1200px) {
+  .contact1-pic {
+    width: 33.5%;
+  }
+
+  .contact1-form {
+    width: 44%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container-contact1 {
+    padding: 90px 80px 88px 90px;
+  }
+
+  .contact1-pic {
+    width: 35%;
+  }
+
+  .contact1-form {
+    width: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-contact1 {
+    padding: 90px 80px 88px 80px;
+  }
+
+  .contact1-pic {
+    display: none;
+  }
+
+  .contact1-form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-contact1 {
+    padding: 90px 15px 88px 15px;
+  }
+}
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+  position: relative;
+}
+
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 8px;
+  pointer-events: none;
+
+  font-family: Montserrat-Medium;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 13px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.titulo-contato {
+  /* font-weight: 100; */
+  font-size: 37px;
+  margin-top: 70px;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
 }
