@@ -267,10 +267,12 @@
               </div>
 
             </div>
-
-            <button id="prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
-            <button id="nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            <div class="navigation">
+              <button id="prev prevBtn"><i class="fa-solid fa-arrow-left"></i></button>
+              <button id="next nextBtn"><i class="fa-solid fa-arrow-right"></i></button>
+            </div>
           </div>
+
         </div>
       </article>
 
@@ -294,22 +296,22 @@
             </span>
 
             <div class="wrap-input1 validate-input" data-validate="Name is required">
-              <input class="input1" type="text" name="name" placeholder="Nome">
+              <input class="input1" type="text" name="name" placeholder="Nome" required>
               <span class="shadow-input1"></span>
             </div>
 
             <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-              <input class="input1" type="email" name="email" placeholder="Email">
+              <input class="input1" type="email" name="email" placeholder="Email" required>
               <span class="shadow-input1"></span>
             </div>
 
             <div class="wrap-input1 validate-input" data-validate="Subject is required">
-              <input class="input1" type="text" name="subject" placeholder="Título">
+              <input class="input1" type="text" name="subject" placeholder="Título" required>
               <span class="shadow-input1"></span>
             </div>
 
             <div class="wrap-input1 validate-input" data-validate="Message is required">
-              <textarea class="input1" name="message" placeholder="Mensagem"></textarea>
+              <textarea class="input1" name="message" placeholder="Mensagem" data-validate="Message is required" required></textarea>
               <span class="shadow-input1"></span>
             </div>
 

@@ -644,7 +644,9 @@ h1 {
   border-radius: 100px;
   box-shadow: 5px 5px 5px #5a9bcd;
 }
-
+.hidden {
+  display: none;
+}
 .card-container {
   margin-top: 20px; /* Adicione um espaçamento entre a barra de navegação e os cards */
   padding-top: 5px; /* Adicione um espaçamento interno no topo do container dos cards */

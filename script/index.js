@@ -252,3 +252,24 @@ function showSlide(n) {
 
   slides[slideIndex].style.display = "block";
 }
+//animação cards
+const slides = document.querySelectorAll(".slides .card-pj");
+let currentSlide = 0;
+
+function showSlide(n) {
+  slides[currentSlide].classList.remove("active");
+  slides[currentSlide].classList.add("hidden");
+
+  currentSlide = (n + slides.length) % slides.length;
+
+  slides[currentSlide].classList.remove("hidden");
+  slides[currentSlide].classList.add("active");
+}
+
+document.querySelector(".prev").addEventListener("click", () => {
+  showSlide(currentSlide - 1);
+});
+
+document.querySelector(".next").addEventListener("click", () => {
+  showSlide(currentSlide + 1);
+});
