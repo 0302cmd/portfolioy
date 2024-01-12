@@ -9,8 +9,9 @@ body {
 
 .topico-h {
   margin: 15px;
-  font-size: 20px;
+  font-size: 33px;
   font-family: "Outfit";
+  color: #535353;
 }
 .icons {
   font-size: 40px;
@@ -19,8 +20,6 @@ body {
   text-align: justify; /*Para centralizar o conteúdo interno horizontalmente */
   max-width: 600px; /* Definindo uma largura máxima para o conteúdo */
   width: 100%; /* Permitindo que o conteúdo ocupe toda a largura disponível */
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
   color: #757575;
 }
 .container {
@@ -109,7 +108,7 @@ body {
 
 .title {
   padding: 20px;
-  color: #333333;
+  color: #535353;
   font-weight: bold;
   font-size: 23px;
 }
@@ -283,7 +282,9 @@ a:-webkit-any-link {
 .dark-theme .navbar {
   background: #757575;
 }
-
+.dark-theme .card p {
+  color: #fff;
+}
 .dark-theme .navbar a {
   color: #fff;
 }
@@ -377,7 +378,7 @@ nav {
   padding: 30px;
 }
 h2 {
-  color: #3f3f3f;
+  color: #535353;
   font-size: 23px;
 }
 nav a {
@@ -391,7 +392,7 @@ nav a {
 }
 .pcnav a {
   position: relative;
-  color: #333;
+  color: #535353;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -446,7 +447,7 @@ header {
   font-size: 30px;
   cursor: pointer;
   /*background: #6f5fc7;*/
-  color: #424242;
+  color: #535353;
   text-align: center;
   z-index: 1000;
 }
@@ -620,9 +621,9 @@ h1 {
 
 .topico {
   /*font-weight: 100;*/
-  font-size: 37px;
+  font-size: 35px;
   margin-top: 70px;
-  color: #333333;
+  color: #535353;
   font-family: "Outfit", sans-serif;
   font-weight: bold;
 }
@@ -689,6 +690,7 @@ h1 {
   font-size: 20px;
   font-weight: 550;
   margin-top: 9px;
+  color: #535353;
 }
 
 .logo-html {
@@ -1474,7 +1476,7 @@ body {
 
 .fa-brands {
   font-size: 50px;
-  color: #333333;
+  color: #4e4e4e;
 }
 
 /*serviços*/
@@ -1556,6 +1558,7 @@ body {
 #contato img {
   max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho da seção */
   height: auto; /* Mantém a proporção da imagem */
+  padding: 35px;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -1569,7 +1572,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Montserrat-Regular, sans-serif;
   /* ... e outros estilos específicos */
   position: relative;
   z-index: 0; /* Um número maior para o formulário */
@@ -1640,7 +1642,7 @@ iframe {
 .contact1 {
   width: 100%;
   min-height: 100%;
-  padding: 15px;
+  padding: 15px 15px 15px 15px;
 
   /*background: linear-gradient(
     135deg,
@@ -1663,7 +1665,6 @@ iframe {
   background: #fff;
   border-radius: 10px;
   overflow: hidden;
-
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -1673,7 +1674,7 @@ iframe {
   justify-content: space-between;
   align-items: center;
 
-  padding: 90px 130px 88px 148px;
+  padding: 3.5% 11% 3.5% 12.5%; /* Exemplo de proporções ajustadas */
 }
 
 /*------------------------------------------------------------------
@@ -1694,14 +1695,26 @@ iframe {
 
 .contact1-form-title {
   display: block;
-  font-family: Montserrat-ExtraBold;
-  font-size: 24px;
-  color: #333333;
+  font-weight: 400;
+  font-size: 17px;
+  color: #666;
   line-height: 1.2;
   text-align: center;
-  padding-bottom: 44px;
+  padding-bottom: 22px;
 }
-
+.contato-titulo {
+  display: block;
+  font-size: 22px;
+  color: #535353;
+  line-height: 1.2;
+  text-align: center;
+  padding-bottom: 26px;
+  /* font-weight: 100; */
+  font-size: 37px;
+  margin-top: 20px;
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+}
 input.input1 {
   height: 50px;
   border-radius: 25px;
@@ -1732,7 +1745,6 @@ textarea.input1 + .shadow-input1 {
   display: block;
   width: 100%;
   background: #e6e6e6;
-  font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
   color: #666666;
@@ -1748,7 +1760,7 @@ textarea.input1 + .shadow-input1 {
   width: 100%;
   height: 100%;
   box-shadow: 0px 0px 0px 0px;
-  color: rgba(87, 184, 70, 0.5);
+  color: #5a9bcd;
 }
 
 .input1:focus + .shadow-input1 {
@@ -1785,7 +1797,7 @@ textarea.input1 + .shadow-input1 {
   min-width: 193px;
   height: 50px;
   border-radius: 25px;
-  background: #57b846;
+  background: #5a9bcd;
   font-family: Montserrat-Bold;
   font-size: 15px;
   line-height: 1.5;
