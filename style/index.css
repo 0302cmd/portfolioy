@@ -6,7 +6,63 @@ body {
   margin: 0; /*retira a margem branca do lado esquerdo*/
   padding: 0;
 }
+/* Adicione estas regras de estilo no seu arquivo de estilo CSS */
 
+.section.first-section {
+  text-align: center;
+}
+
+.img-botoes-container {
+  margin-top: 20px;
+}
+
+.logo-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nome2 {
+  font-size: 1.5em; /* Ajuste conforme necessário para o tamanho desejado */
+}
+/* Adicione estas regras de estilo no seu arquivo de estilo CSS */
+
+.botao-i {
+  margin: 0 10px;
+  color: #535353; /* Cor cinza para os ícones */
+  font-size: 1.5em; /* Ajuste conforme necessário para o tamanho desejado */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito */
+}
+
+.logo-buttons .botao-i:hover {
+  color: #2c2c2c;
+  transform: translateY(-5px);
+}
+/* Tooltip styles */
+.logo-buttons .botao-i[data-tooltip] {
+  position: relative;
+}
+
+.logo-buttons .botao-i[data-tooltip]:hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  background: #757575;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 15px;
+  bottom: 155%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  font-size: 14px; /* Adjust the font size as needed */
+}
+
+.logo-buttons .botao-i[data-tooltip]:hover::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-5px);
+}
 .topico-h {
   margin: 15px;
   font-size: 33px;
@@ -44,6 +100,100 @@ body {
   border-radius: 18px;
   height: auto;
 }
+
+.projeto-1,
+.projeto-3 {
+  flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border-radius: 10px; /* Define a borda arredondada */
+  padding: 10px; /* Adiciona um espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Alinha os botões verticalmente */
+}
+.projeto-2,
+.projeto-4 {
+  flex-basis: calc(50% - 20px); /* Define a largura de cada projeto */
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border-radius: 10px; /* Define a borda arredondada */
+  padding: 10px; /* Adiciona um espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Alinha os botões verticalmente */
+}
+.projetos-container {
+  display: flex;
+  justify-content: space-between; /* Distribui os projetos com espaço entre eles */
+}
+
+.projetos-container > div {
+  max-width: 400px;
+  flex-basis: calc(50% - 20px);
+  margin-top: 0%;
+  margin-bottom: 20px;
+  border: none;
+  background-color: #ffffff;
+  box-shadow: 3px 3px 5px 0px rgba(73, 74, 74, 0.11); /* Sombra azul clara */
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.projeto-1 img,
+.projeto-2 img,
+.projeto-3 img,
+.projeto-4 img {
+  width: 300px; /* Defina a largura desejada para a imagem */
+  border-radius: 10px;
+}
+
+.projeto-1 h2,
+.projeto-2 h2,
+.projeto-3 h2,
+.projeto-4 h2 {
+  margin-top: 10px;
+  font-size: 27px;
+  padding: 5px;
+  color: #373737;
+  font-family: "Outfit", sans-serif;
+}
+
+.projeto-1 p,
+.projeto-2 p,
+.projeto-3 p,
+.projeto-4 p {
+  font-size: 16px;
+  color: #6d6d6d;
+  margin-top: 3px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.projeto-1 .botao-p,
+.projeto-2 .botao-p,
+.projeto-3 .botao-p,
+.projeto-4 .botao-p {
+  margin-top: 10px;
+  padding: 0px 10px;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.projeto-1 .botao-p:hover,
+.projeto-2 .botao-p:hover,
+.projeto-3 .botao-p:hover,
+.projeto-4 .botao-p:hover {
+  background-color: #0077cc;
+}
+
 .projeto {
   flex: 0 0 auto;
   width: 300px; /* Largura de cada projeto */
@@ -278,14 +428,19 @@ a:-webkit-any-link {
   color: #fff; /* Define a cor da fonte para branco */
 }
 .dark-theme .botao {
-  background-color: #757575;
+  background-color: #424242;
 }
-.dark-theme .absolute {
-  display: none;
+.dark-theme .botao-i {
+  color: #e3e3e3;
 }
-
+.dark-theme .botao-i :hover {
+  color: #a9a9a9;
+}
 .dark-theme .profissao {
-  color: #5a9bcd;
+  background: #5a9bcd;
+  -webkit-background-clip: text; /* Adiciona o gradiente ao texto */
+  color: transparent; /* Torna o texto transparente para mostrar o gradiente por trás */
+  /*text-shadow: 2px 2px 4px rgba(131, 111, 255, 0.3);  Ajuste a cor da sombra para corresponder à cor do texto */
 }
 
 .dark-theme .botao-p {
@@ -331,6 +486,29 @@ a:-webkit-any-link {
   display: block;
   margin-right: 5px; /* Adapte o espaçamento conforme necessário */
 }
+
+/* Para navegadores baseados no motor Blink (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 12px; /* largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    #5a9bcd,
+    #2980b9
+  ); /* degradê azul para o polegar */
+  border-radius: 6px; /* borda arredondada do polegar */
+}
+
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    to bottom,
+    #f1f1f1,
+    #dcdcdc
+  ); /* degradê cinza para a barra de rolagem */
+}
+
 /*dark2*********************************/
 body.dark {
   background: #292c35;
@@ -620,14 +798,16 @@ h1 {
 
 .profissao {
   margin-top: 0;
-  font-size: 73px;
-  text-align: center; /* Centraliza o texto */
-  font-family: "Belanosima", sans-serif; /* Substitua 'Montserrat' pela fonte desejada */
-  /*color: #2491eb;*/
-  color: #5a9bcd;
+  font-size: 120px;
+  text-align: center;
+  font-family: "Belanosima", sans-serif;
   margin-bottom: 0px;
+  background: #5a9bcd;
+  -webkit-background-clip: text; /* Adiciona o gradiente ao texto */
+  color: transparent; /* Torna o texto transparente para mostrar o gradiente por trás */
   /*text-shadow: 2px 2px 4px rgba(131, 111, 255, 0.3);  Ajuste a cor da sombra para corresponder à cor do texto */
 }
+
 .absolute {
   margin-top: 10000px;
   position: absolute;
@@ -864,21 +1044,6 @@ button[type="submit"] {
   display: flex;
   justify-content: center; /* Alinha os botões horizontalmente */
   align-items: center;
-}
-
-.img-linkedin {
-  margin-top: 3px;
-  width: 65px;
-}
-
-.img-git {
-  margin-top: 8px;
-  width: 54px;
-}
-
-.img-cv {
-  margin-top: 5px;
-  width: 58px;
 }
 
 /*footer*************************************************************/
@@ -1249,6 +1414,9 @@ button[type="submit"] {
   .icon-increase {
     font-size: 16px; /* Reduz o tamanho para telas menores */
   }
+  .section {
+    min-height: 590px;
+  }
 }
 /*********************************/
 
@@ -1292,6 +1460,7 @@ button[type="submit"] {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  min-height: 660px;
 }
 
 .section.fade-up {
@@ -1437,9 +1606,11 @@ body {
   .menu-toggle:checked ~ .menu-items {
     display: block;
   }
-
+  .nome2 {
+    display: none;
+  }
   .profissao {
-    font-size: 50px;
+    font-size: 60px;
   }
   .text-container {
     flex-direction: column;
