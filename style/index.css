@@ -81,7 +81,7 @@ body {
 }
 
 .paragrafo {
-  max-width: 800px; /* Adapte conforme necessário */
+  max-width: 550px; /* Adapte conforme necessário */
   margin: 0 auto;
   flex: 2; /* Ajuste conforme necessário para o espaço que deseja dar ao texto */
 }
@@ -96,7 +96,7 @@ body {
   text-align: center;
 }
 .me-image {
-  max-width: 100%;
+  max-width: 90%;
   border-radius: 18px;
   height: auto;
 }
@@ -306,12 +306,19 @@ body {
 a:-webkit-any-link {
   text-decoration: none;
 }
-
+.name-head {
+  position: absolute;
+  margin-top: 17px;
+  left: 18px; /* Ajuste conforme necessário para a posição desejada */
+  font-size: 26px;
+  font-family: "Belanosima", sans-serif;
+  color: #2980b9;
+}
 /* Estilos para a caixa de seleção de tema */
 .theme-switch {
   position: absolute;
   margin-top: 15px;
-  left: 100px; /* Ajuste conforme necessário para a posição desejada */
+  left: 150px; /* Ajuste conforme necessário para a posição desejada */
   font-size: 14px;
 }
 
@@ -1571,7 +1578,7 @@ body {
 }
 
 /* Estilos para telas menores */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 820px) {
   .container {
     padding: 20px; /* Adapte conforme necessário */
     flex-direction: column;
@@ -1582,10 +1589,9 @@ body {
   /* Estilos para a caixa de seleção de tema */
   .theme-switch {
     margin-top: 20px;
-    margin-right: 100px; /* Ajuste conforme necessário */
     font-size: 14px;
     position: absolute;
-    left: 70px; /* Ajuste conforme necessário para a posição desejada */
+    margin-right: 80px; /* Ajuste conforme necessário para a posição desejada */
     font-size: 14px;
   }
   .menu-items {
@@ -1624,7 +1630,7 @@ body {
 }
 
 /*nav mobile*/
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 820px) {
   .pcnav {
     display: none;
   }
@@ -1660,7 +1666,7 @@ body {
     padding: 16px;
   }
 }
-@media screen and (min-width: 545px) {
+@media screen and (min-width: 825px) {
   #menu-btn {
     display: none;
   }
